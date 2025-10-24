@@ -155,7 +155,7 @@ export default function Header() {
             <Link href="/certificados" className="block px-4 py-2 hover:bg-accent">
               Certificado Digital
             </Link>
-            <Link href="/planos" className="block px-4 py-2 hover:bg-accent">
+            <Link href="/healthplans" className="block px-4 py-2 hover:bg-accent">
               Planos e Seguros
             </Link>
             <Link href="/certificados#renovacao" className="block px-4 py-2 hover:bg-accent">
