@@ -15,7 +15,7 @@ const certificates = [
     id: 2,
     icon: FileCheck,
     title: "e-CPF A3",
-    description: "Certificado digital para pessoa física com chip criptográfico. Maior segurança para transações importantes.",
+    description: "Certificado digital para pessoa física com mídia criptografada. Maior segurança para transações importantes.",
     color: "text-green-500",
   },
   {
@@ -28,8 +28,8 @@ const certificates = [
   {
     id: 4,
     icon: ScrollText,
-    title: "NF-e",
-    description: "Certificado digital para emissão de notas fiscais eletrônicas. Essencial para formalização do seu negócio.",
+    title: "SafeID",
+    description: "Certificado digital para pessoa juíridca ou física em nuvem. Utilização direta no seu smartphone.",
     color: "text-primary",
   },
 ];
@@ -62,16 +62,20 @@ export default function CertificatesCarousel() {
                   <CardDescription className="text-base mb-4">
                     {cert.description}
                   </CardDescription>
-                  <Link href="/certificados">
-                    <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground">
-                      Saiba Mais
-                    </Button>
-                  </Link>
                 </CardContent>
               </Card>
             );
           })}
         </div>
+
+        <div className="flex justify-center aling-center mt-8">
+          <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+            <Button variant="outline" className="w-80 hover:bg-primary hover:text-primary-foreground">
+              Mais Informações
+            </Button>
+          </Link>
+        </div>
+
       </div>
     </section>
   );

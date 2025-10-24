@@ -17,23 +17,17 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-xl">
-                TH
+                <img src="/logopng.png" alt="Logo" />
               </div>
-              <span className="font-bold text-xl">TH Tecnologia</span>
+              <span className="font-bold text-xl">TH TECNOLOGIA E CONSULTORIA LTDA</span>
             </div>
             <p className="text-primary-foreground/90 mb-4">
               Especialistas em Certificados Digitais e Planos de Saúde. 
               Segurança e qualidade de vida para você e sua empresa.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com/th_tecnologia" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <a href="https://www.instagram.com/thcertificadora/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <Instagram className="h-6 w-6" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <Linkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -43,22 +37,22 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/certificados" className="hover:opacity-80 transition-opacity">
+                <Link href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce" className="hover:opacity-80 transition-opacity" target="_blank">
                   Certificados Digitais
                 </Link>
               </li>
               <li>
-                <Link href="/planos" className="hover:opacity-80 transition-opacity">
-                  Planos de Saúde
+                <Link href="/#planos" className="hover:opacity-80 transition-opacity">
+                  Planos e Seguros
                 </Link>
               </li>
               <li>
-                <Link href="/#sobre" className="hover:opacity-80 transition-opacity">
-                  Sobre Nós
+                <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" className="hover:opacity-80 transition-opacity" target="_blank">
+                  Suporte Especializado
                 </Link>
               </li>
               <li>
-                <Link href="/#contato" className="hover:opacity-80 transition-opacity">
+                <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" className="hover:opacity-80 transition-opacity" target="_blank">
                   Contato
                 </Link>
               </li>
@@ -69,17 +63,16 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li>e-CPF</li>
-              <li>e-CNPJ</li>
-              <li>NF-e</li>
-              <li>Planos Empresariais</li>
+              <li>Certificado Digital</li>
+              <li>Planos e Seguros</li>
+              <li>Suporte Especializado</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/90">
-            © {year} TH Tecnologia de Certificados Digitais e Planos de Saúde. Todos os direitos reservados.
+            © {year} TH Tecnologia e Consultoria LTDA. Todos os direitos reservados.
           </p>
         </div>
       </div>

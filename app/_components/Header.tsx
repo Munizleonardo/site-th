@@ -35,16 +35,16 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-              TH
+              <img src="logopng.png" alt="Logo"/>
             </div>
             <span className={`font-bold text-lg ${scrolled ? "text-foreground" : "text-white"}`}>
-              TH Tecnologia.
+              TH TECNOLOGIA
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
-            <Link href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce" target="_blank">
+            <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
               <Button
                 variant="ghost"
                 className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
@@ -53,7 +53,7 @@ export default function Header() {
               </Button>
             </Link>
 
-            <Link href="/planos" target="_blank">
+            <Link href="/healthplans">
               <Button
                 variant="ghost"
                 className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}

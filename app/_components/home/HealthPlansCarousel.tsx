@@ -1,36 +1,32 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Button } from "@/app/_components/ui/button";
-import { Heart, Users, Briefcase, Home } from "lucide-react";
+import { Heart, Car, Briefcase, Home } from "lucide-react";
 import Link from "next/link"
 
 const healthPlans = [
   {
     id: 1,
     icon: Heart,
-    company: "Bradesco Saúde",
-    plan: "Plano Individual",
+    company: "Plano de Saúde",
     description: "Plano completo para você que busca qualidade e segurança na saúde. Rede credenciada ampla e atendimento premium.",
   },
   {
     id: 2,
-    icon: Users,
-    company: "SulAmérica",
-    plan: "Plano Familiar",
-    description: "Proteja toda sua família com um único plano. Cobertura nacional e acesso aos melhores hospitais.",
+    icon: Car,
+    company: "Seguro Auto",
+    description: "Proteja toda sua família com um único plano. Cobertura nacional para se locomover com segurança.",
   },
   {
     id: 3,
     icon: Briefcase,
-    company: "Amil",
-    plan: "Plano Empresarial",
+    company: "Seguro Empresarial",
     description: "Soluções personalizadas para sua empresa. Cuide da saúde dos seus colaboradores com economia.",
   },
   {
     id: 4,
     icon: Home,
-    company: "Unimed",
-    plan: "Plano Completo",
-    description: "Cobertura completa com telemedicina incluída. Atendimento de qualidade onde você estiver.",
+    company: "Seguro Residencial",
+    description: "Proteja sua família de forma consciente. Em todos os momentos de sua vida.",
   },
 ];
 
@@ -57,22 +53,26 @@ export default function HealthPlansCarousel() {
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{plan.company}</CardTitle>
-                  <p className="text-sm font-semibold text-primary">{plan.plan}</p>
+                  <p className="text-sm font-semibold text-primary"></p>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base mb-4">
                     {plan.description}
                   </CardDescription>
-                  <Link href="/planos">
-                    <Button className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
-                      Consulte Condições
-                    </Button>
-                  </Link>
                 </CardContent>
               </Card>
             );
           })}
         </div>
+
+        <div className="flex justify-center aling-center mt-8">
+          <Link href="/healthplans" target="_blank">
+            <Button variant="outline" className="w-75 bg-primary hover:bg-primary-hover text-primary-foreground">
+              Mais Informações
+            </Button>
+          </Link>
+        </div>
+        
       </div>
     </section>
   );

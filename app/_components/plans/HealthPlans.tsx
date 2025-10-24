@@ -2,49 +2,67 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const slides = [
-  {
-    id: 1,
-    title: "O que é um Certificado Digital?",
-    description: "Garanta a segurança e a validade jurídica de suas transações online.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1920&q=80",
-  },
-  {
-    id: 2,
-    title: "Cuidamos da sua saúde e da sua família",
-    description: "Conheça nossos planos de saúde com as melhores condições.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80",
-  },
-  {
-    id: 3,
-    title: "Trabalhamos com as maiores seguradoras",
-    description: "Encontre o plano ideal para você com nossos parceiros confiáveis.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80",
-  },
-];
+const slidesPlans = [
+    {
+      id: 1,
+      title: "Plano de Saúde",
+      description: "Melhores operadoras para assegurar você e sua família. Cobertura nacional para uma maior tranquilidade.",
+      image: "/Plano_de_Saúde.jpg",
+    },
+    {
+      id: 2,
+      title: "Plano Odontológico",
+      description: "Principais centros odontológicos disponíveis para alinhar o seu sorriso e buscar melhorar sua autoestima.",
+      image: "/Plano_Odontologico.jpg",
+    },
+    {
+      id: 3,
+      title: "Seguro de Carro",
+      description: "Locomova-se com tranquilidade, sabendo que está assegurado das melhores seguradoras do Brasil.",
+      image: "/Seguro_de_Carro.jpg",
+    },
+    {
+        id: 4,
+        title: "Seguro de Moto",
+        description: "Seguro voltado para segurança nacional da sua motocicleta, buscando conforto e tranquilidade nas suas viagens.",
+        image: "/Seguro_Moto.jpg",
+      },
+      {
+        id: 5,
+        title: "Seguro Empresarial",
+        description: "Soluções personalizadas para sua empresa. Cuide da saúde dos seus colaboradores com economia.",
+        image: "/Seguro_Empresarial.jpg",
+      },
+      {
+        id: 6,
+        title: "Seguro Residencial",
+        description: "Proteja sua família de forma consciente. Em todos os momentos de sua vida.",
+        image: "/Seguro_Residencial.jpg",
+      },
+  ];
 
-export default function HeroCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+export default function HealthPlans() {
+  const [currentSlide, setCurrentSlidePlans] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlidePlans((prev) => (prev + 1) % slidesPlans.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlidePlans((prev) => (prev + 1) % slidesPlans.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlidePlans((prev) => (prev - 1 + slidesPlans.length) % slidesPlans.length);
   };
 
   return (
     <div className="relative h-[600px] lg:h-[700px] overflow-hidden">
-      {slides.map((slide, index) => (
+      {slidesPlans.map((slide, index) => (
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -87,10 +105,10 @@ export default function HeroCarousel() {
 
       {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-        {slides.map((_, index) => (
+        {slidesPlans.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => setCurrentSlidePlans(index)}
             className={`w-3 h-3 rounded-full transition-all ${
               index === currentSlide ? "bg-primary w-8" : "bg-white/50"
             }`}

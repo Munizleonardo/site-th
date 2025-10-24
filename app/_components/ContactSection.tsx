@@ -22,8 +22,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">E-mail</h3>
-                <a href="mailto:contato@thtecnologia.com.br" className="text-muted-foreground hover:text-primary transition-colors">
-                  contato@thtecnologia.com.br
+                <a href="mailto:administrativo@thtecnologia.com.br" className="text-muted-foreground hover:text-primary transition-colors">
+                  administrativo@thtecnologia.com.br
                 </a>
               </div>
             </div>
@@ -34,8 +34,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  (11) 99999-9999
+                <a href="https://wa.me/5521970686270" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  (21) 97068-6270
                 </a>
               </div>
             </div>
@@ -46,8 +46,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Instagram</h3>
-                <a href="https://instagram.com/th_tecnologia" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  @th_tecnologia
+                <a href="https://www.instagram.com/thcertificadora/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  @thcertificadora
                 </a>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function ContactSection() {
           {/* Map */}
           <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.097193682895!2d-46.65424668502207!3d-23.561414684682324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1635180000000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.8782018802162!2d-43.32657618803515!3d-22.880957279186887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997d2ead285c11%3A0x6534e3a2217a6a0!2sR.%20Cerqueira%20Daltro%2C%20157%20-%20Cascadura%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021380-320!5e0!3m2!1spt-BR!2sbr!4v1761322657203!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
