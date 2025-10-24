@@ -38,7 +38,7 @@ export default function Header() {
               TH
             </div>
             <span className={`font-bold text-lg ${scrolled ? "text-foreground" : "text-white"}`}>
-              TH Tecnologia
+              TH Tecnologia.
             </span>
           </Link>
 
