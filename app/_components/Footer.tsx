@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/90">
-            © year TH Tecnologia de Certificados Digitais e Planos de Saúde. Todos os direitos reservados.
+            © {year} TH Tecnologia de Certificados Digitais e Planos de Saúde. Todos os direitos reservados.
           </p>
         </div>
       </div>
