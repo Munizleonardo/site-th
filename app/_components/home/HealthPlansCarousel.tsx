@@ -66,7 +66,7 @@ export default function HealthPlansCarousel() {
         </div>
 
         <div className="flex justify-center aling-center mt-8">
-          <Link href="/healthplans" target="_blank">
+          <Link href="/healthplans">
             <Button variant="outline" className="w-75 bg-primary hover:bg-primary-hover text-primary-foreground">
               Mais Informações
             </Button>

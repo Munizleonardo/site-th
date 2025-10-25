@@ -1,5 +1,5 @@
 import Header from "@/app/_components/Header";
-import Footer from "@/app/_components/Footer";
+import Link from "next/link"
 import { Button } from "@/app/_components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Shield, FileCheck, FileText, ScrollText, Check } from "lucide-react";
@@ -23,7 +23,7 @@ const certificates = [
     icon: FileCheck,
     title: "e-CPF A3",
     validity: "1 a 3 anos",
-    price: "A partir de R$ 220,00",
+    price: "A partir de R$ 200,00",
     features: [
       "Token ou Cartão com chip",
       "Maior segurança",
@@ -36,7 +36,7 @@ const certificates = [
     icon: FileText,
     title: "e-CNPJ A1",
     validity: "1 ano",
-    price: "A partir de R$ 200,00",
+    price: "A partir de R$ 240,00",
     features: [
       "Para pessoa jurídica",
       "Emissão de notas fiscais",
@@ -53,6 +53,58 @@ const certificates = [
     features: [
       "Máxima segurança empresarial",
       "Token ou Cartão",
+      "Assinatura digital de documentos",
+      "Conformidade legal garantida",
+    ],
+  },
+  {
+    id: 5,
+    icon: Shield,
+    title: "SafeID",
+    validity: "4 anos em Nuvem",
+    price: "A partir de R$ 110,00",
+    features: [
+      "Utilização pelo celular",
+      "Armazenamento no celular",
+      "Assinatura digital de documentos",
+      "Facilidade de uso",
+    ],
+  },
+  {
+    id: 6,
+    icon: FileCheck,
+    title: "NF-e",
+    validity: "1 ano",
+    price: "A partir de R$ 140,00",
+    features: [
+      "Emissão de Notas Fiscais",
+      "Simplificação Fiscal",
+      "Vinculação a Terceiros",
+      "Conformidade legal garantida",
+    ],
+  },
+  {
+    id: 7,
+    icon: FileText,
+    title: "OAB A3",
+    validity: "3 anos",
+    price: "A partir de R$ 130,00",
+    features: [
+      "Certificado digital para Advogados",
+      "Token ou Cartão",
+      "Portabilidade Garantida",
+      "Conformidade legal garantida",
+    ],
+  },
+  {
+    id: 8,
+    icon: ScrollText,
+    title: "e-PJ A1",
+    validity: "1 ano",
+    price: "A partir de R$ 270,00",
+    features: [
+      "Voltado para Empresas Inativas",
+      "Emissão de Notas Fiscais",
       "Assinatura digital de documentos",
       "Conformidade legal garantida",
     ],
@@ -101,9 +153,11 @@ export default function Certificados() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-primary hover:bg-primary-hover">
-                      Solicitar Agora
-                    </Button>
+                    <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+                      <Button className="w-full bg-primary hover:bg-primary-hover">
+                        Solicitar Agora
+                      </Button> 
+                    </Link>
                   </CardContent>
                 </Card>
               );
@@ -121,9 +175,11 @@ export default function Certificados() {
               Seu certificado está vencendo? Renove agora de forma rápida e sem complicações. 
               Garantimos o melhor preço e atendimento personalizado.
             </p>
-            <Button className="btn-hero">
-              Renovar Certificado
-            </Button>
+            <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+              <Button className="btn-hero">
+                Renovar Agora
+              </Button> 
+            </Link>
           </div>
         </div>
       </section>
@@ -150,8 +206,6 @@ export default function Certificados() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

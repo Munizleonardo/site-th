@@ -29,7 +29,7 @@ const certificates = [
     id: 4,
     icon: ScrollText,
     title: "SafeID",
-    description: "Certificado digital para pessoa juíridca ou física em nuvem. Utilização direta no seu smartphone.",
+    description: "Certificado digital para pessoa jurídica ou física em nuvem. Utilização direta no seu smartphone.",
     color: "text-primary",
   },
 ];
@@ -69,7 +69,7 @@ export default function CertificatesCarousel() {
         </div>
 
         <div className="flex justify-center aling-center mt-8">
-          <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+          <Link href="/certificados">
             <Button variant="outline" className="w-80 hover:bg-primary hover:text-primary-foreground">
               Mais Informações
             </Button>

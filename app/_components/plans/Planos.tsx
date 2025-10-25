@@ -1,6 +1,6 @@
 import Header from "@/app/_components/Header";
 import { Button } from "@/app/_components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/_components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Heart, Users, Briefcase, Home, Check } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
@@ -46,7 +46,55 @@ const plans = [
     id: 4,
     image: "/unimed.png",
     company: "Unimed",
+    price: "Consulte condições",
+    features: [
+      "Livre escolha de médicos",
+      "Cobertura internacional",
+      "Check-up anual gratuito",
+      "Programa de bem-estar",
+    ],
+  },
+  {
+    id: 5,
+    image: "/assim.png",
+    company: "Assim Saúde",
     price: "A partir de R$ 450,00/mês",
+    features: [
+      "Livre escolha de médicos",
+      "Cobertura internacional",
+      "Check-up anual gratuito",
+      "Programa de bem-estar",
+    ],
+  },
+  {
+    id: 6,
+    image: "/portoseguro.jpg",
+    company: "Porto Seguro",
+    price: "A partir de R$ 450,00/mês",
+    features: [
+      "Livre escolha de médicos",
+      "Cobertura internacional",
+      "Check-up anual gratuito",
+      "Programa de bem-estar",
+    ],
+  },
+  {
+    id: 7,
+    image: "/allianz.jpg",
+    company: "Allianz Seguradora",
+    price: "Consulte condições",
+    features: [
+      "Livre escolha de médicos",
+      "Cobertura internacional",
+      "Check-up anual gratuito",
+      "Programa de bem-estar",
+    ],
+  },
+  {
+    id: 8,
+    image: "/liberty123.jpg",
+    company: "Liberty Seguros",
+    price: "Consulte condições",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -99,16 +147,20 @@ export default function Planos() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
-                      <Button className="outline">
-                        Solicitar Cotação
-                      </Button>
-                    </Link>
                   </CardContent>
                 </Card>
               );
             })}
           </div>
+
+          <div className="flex justify-center aling-center mt-8">
+            <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+              <Button className="outline">
+                Solicitar Cotação
+              </Button>
+            </Link>
+          </div>
+
         </div>
       </section>
 
