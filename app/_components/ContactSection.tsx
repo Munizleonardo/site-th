@@ -13,7 +13,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="flex flex-column max-w-6xl mx-auto justify-between items-center">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
@@ -54,7 +54,7 @@ export default function ContactSection() {
           </div>
 
           {/* Map */}
-          <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
+          <div className="rounded-lg overflow-hidden shadow-lg w-[500px] h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.8782018802162!2d-43.32657618803515!3d-22.880957279186887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997d2ead285c11%3A0x6534e3a2217a6a0!2sR.%20Cerqueira%20Daltro%2C%20157%20-%20Cascadura%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021380-320!5e0!3m2!1spt-BR!2sbr!4v1761322657203!5m2!1spt-BR!2sbr"
               width="100%"
