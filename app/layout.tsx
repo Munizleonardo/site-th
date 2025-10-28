@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        <meta name="descrilption" content="TH Tecnologia, Certificado Digital, Emissão Online, Planos e Seguros"/>
+        <meta name="description" content="TH Tecnologia, Certificado Digital, Emissão Online, Planos e Seguros"/>
         <meta name="keywords" content="certificado digital, nuvem, renovação, emissão online, plano de saúde, seguro de carro, certificado a1, certificado a3, mídia"/>
         <meta name="author" content="TH Tecnologia"/>
       </head>

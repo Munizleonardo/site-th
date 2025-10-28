@@ -37,12 +37,12 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce" className="hover:opacity-80 transition-opacity" target="_blank">
+                <Link href="/certificados" className="hover:opacity-80 transition-opacity">
                   Certificados Digitais
                 </Link>
               </li>
               <li>
-                <Link href="/#planos" className="hover:opacity-80 transition-opacity">
+                <Link href="/healthplans" className="hover:opacity-80 transition-opacity">
                   Planos e Seguros
                 </Link>
               </li>

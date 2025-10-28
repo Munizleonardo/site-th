@@ -11,34 +11,16 @@ const slidesPlans = [
     },
     {
       id: 2,
-      title: "Plano Odontológico",
-      description: "Principais centros odontológicos disponíveis para alinhar o seu sorriso e buscar melhorar sua autoestima.",
-      image: "/Plano_Odontologico.jpg",
-    },
-    {
-      id: 3,
-      title: "Seguro de Carro",
+      title: "Seguro Auto",
       description: "Locomova-se com tranquilidade, sabendo que está assegurado das melhores seguradoras do Brasil.",
       image: "/Seguro_de_Carro.jpg",
     },
     {
-        id: 4,
-        title: "Seguro de Moto",
-        description: "Seguro voltado para segurança nacional da sua motocicleta, buscando conforto e tranquilidade nas suas viagens.",
-        image: "/Seguro_Moto.jpg",
-      },
-      {
-        id: 5,
-        title: "Seguro Empresarial",
-        description: "Soluções personalizadas para sua empresa. Cuide da saúde dos seus colaboradores com economia.",
-        image: "/Seguro_Empresarial.jpg",
-      },
-      {
-        id: 6,
-        title: "Seguro Residencial",
-        description: "Proteja sua família de forma consciente. Em todos os momentos de sua vida.",
-        image: "/Seguro_Residencial.jpg",
-      },
+      id: 3,
+      title: "Seguro Empresarial",
+      description: "Soluções personalizadas para sua empresa. Cuide da saúde dos seus colaboradores com economia.",
+      image: "/Seguro_Empresarial.jpg",
+    },
   ];
 
 export default function HealthPlans() {

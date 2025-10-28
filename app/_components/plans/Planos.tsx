@@ -10,7 +10,7 @@ const plans = [
     id: 1,
     image: "/bradescp2.jpg",
     company: "Bradesco Saúde",
-    price: "A partir de R$ 300,00/mês",
+    price: "Consulte condições",
     features: [
       "Cobertura nacional",
       "Telemedicina incluída",
@@ -22,7 +22,7 @@ const plans = [
     id: 2,
     image: "/sulamerica.png",
     company: "SulAmérica",
-    price: "A partir de R$ 800,00/mês",
+    price: "Consulte condições",
     features: [
       "Até 6 dependentes",
       "Cobertura completa",
@@ -58,7 +58,7 @@ const plans = [
     id: 5,
     image: "/assim.png",
     company: "Assim Saúde",
-    price: "A partir de R$ 450,00/mês",
+    price: "Consulte condições",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -70,7 +70,7 @@ const plans = [
     id: 6,
     image: "/portoseguro.jpg",
     company: "Porto Seguro",
-    price: "A partir de R$ 450,00/mês",
+    price: "Consulte condições",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -84,10 +84,10 @@ const plans = [
     company: "Allianz Seguradora",
     price: "Consulte condições",
     features: [
-      "Livre escolha de médicos",
-      "Cobertura internacional",
-      "Check-up anual gratuito",
-      "Programa de bem-estar",
+      "Liberdade de locomoção",
+      "Cobertura nacional",
+      "Reboque 24h",
+      "Auxílio Manutenção",
     ],
   },
   {
@@ -96,10 +96,10 @@ const plans = [
     company: "Liberty Seguros",
     price: "Consulte condições",
     features: [
-      "Livre escolha de médicos",
-      "Cobertura internacional",
-      "Check-up anual gratuito",
-      "Programa de bem-estar",
+      "Liberdade de locomoção",
+      "Cobertura nacional",
+      "Reboque 24h",
+      "Auxílio Manutenção",
     ],
   },
 ];
