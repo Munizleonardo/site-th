@@ -1,7 +1,7 @@
 import Header from "@/app/_components/Header";
 import { Button } from "@/app/_components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/_components/ui/card";
-import { Heart, Users, Briefcase, Home, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -11,6 +11,7 @@ const plans = [
     image: "/bradescp2.jpg",
     company: "Bradesco Saúde",
     price: "Consulte condições",
+    link:"/formularios",
     features: [
       "Cobertura nacional",
       "Telemedicina incluída",
@@ -23,6 +24,7 @@ const plans = [
     image: "/sulamerica.png",
     company: "SulAmérica",
     price: "Consulte condições",
+    link:"",
     features: [
       "Até 6 dependentes",
       "Cobertura completa",
@@ -35,6 +37,7 @@ const plans = [
     image: "/amil.png",
     company: "Amil",
     price: "Consulte condições",
+    link:"",
     features: [
       "A partir de 2 vidas",
       "Descontos progressivos",
@@ -47,6 +50,7 @@ const plans = [
     image: "/unimed.png",
     company: "Unimed",
     price: "Consulte condições",
+    link:"",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -59,6 +63,7 @@ const plans = [
     image: "/assim.png",
     company: "Assim Saúde",
     price: "Consulte condições",
+    link:"",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -71,6 +76,7 @@ const plans = [
     image: "/portoseguro.jpg",
     company: "Porto Seguro",
     price: "Consulte condições",
+    link:"",
     features: [
       "Livre escolha de médicos",
       "Cobertura internacional",
@@ -83,6 +89,7 @@ const plans = [
     image: "/allianz.jpg",
     company: "Allianz Seguradora",
     price: "Consulte condições",
+    link:"",
     features: [
       "Liberdade de locomoção",
       "Cobertura nacional",
@@ -95,6 +102,7 @@ const plans = [
     image: "/liberty123.jpg",
     company: "Liberty Seguros",
     price: "Consulte condições",
+    link:"",
     features: [
       "Liberdade de locomoção",
       "Cobertura nacional",
@@ -116,16 +124,18 @@ export default function Planos() {
             Planos de Saúde e Seguros
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Proteja você e sua família com os melhores planos de saúde do mercado. 
-            Trabalhamos com as maiores e mais confiáveis seguradoras do Brasil.
-          </p>
+            Proteja você e sua família com os melhores planos de saúde do mercado.</p> 
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Proteja seus veículos de terceiros e viaje com tranquilidade.</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Trabalhamos com as maiores e mais confiáveis seguradoras do Brasil.</p>
         </div>
       </section>
 
       {/* Plans Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Escolha seu Plano Ideal</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Solicite Cotação</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan) => {
               return (
@@ -148,19 +158,17 @@ export default function Planos() {
                       ))}
                     </ul>
                   </CardContent>
+                  <div className="flex justify-center aling-center">
+                    <Link href={plan.link} target="_blank">
+                      <Button className="outline">
+                        Solicitar Cotação
+                      </Button>
+                    </Link>
+                  </div>
                 </Card>
               );
             })}
           </div>
-
-          <div className="flex justify-center aling-center mt-8">
-            <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
-              <Button className="outline">
-                Solicitar Cotação
-              </Button>
-            </Link>
-          </div>
-
         </div>
       </section>
 
