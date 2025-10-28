@@ -1,5 +1,9 @@
 "use client";
 import { useState } from "react";
+import { Input } from "@/app/_components/ui/input"
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
 
 
 export default function PlanodeSaude() {
@@ -68,8 +72,8 @@ export default function PlanodeSaude() {
           >
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">Nome</label>
-              <input
+              <Label className="font-semibold text-gray-700">Nome</Label>
+              <Input
                 type="text"
                 name="nome"
                 value={formData.nome}
@@ -81,8 +85,8 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">Telefone</label>
-              <input
+              <Label className="font-semibold text-gray-700">Telefone</Label>
+              <Input
                 type="tel"
                 name="telefone"
                 value={formData.telefone}
@@ -95,8 +99,8 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">CPF/CNPJ</label>
-              <input
+              <Label className="font-semibold text-gray-700">CPF/CNPJ</Label>
+              <Input
                 type="text"
                 name="cpfCnpj"
                 value={formData.cpfCnpj}
@@ -109,8 +113,8 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">Cidade</label>
-              <input
+              <Label className="font-semibold text-gray-700">Cidade</Label>
+              <Input
                 type="text"
                 name="cidade"
                 value={formData.cidade}
@@ -122,8 +126,8 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">Bairro</label>
-              <input
+              <Label className="font-semibold text-gray-700">Bairro</Label>
+              <Input
                 type="text"
                 name="bairro"
                 value={formData.bairro}
@@ -135,10 +139,10 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col">
-              <label className="font-semibold text-gray-700">
+              <Label className="font-semibold text-gray-700">
                 Número de Dependentes
-              </label>
-              <input
+              </Label>
+              <Input
                 type="number"
                 name="qtdVidas"
                 value={formData.qtdVidas}
@@ -151,26 +155,26 @@ export default function PlanodeSaude() {
 
             
             <div className="flex flex-col md:col-span-2">
-              <label className="font-semibold text-gray-700">
+              <Label className="font-semibold text-gray-700">
                 Idades das Vidas
-              </label>
-              <textarea
+              </Label>
+              <Textarea
                 name="idades"
                 value={formData.idades}
                 onChange={handleChange}
                 required
                 placeholder="Ex: 25, 32, 40..."
                 className="border border-gray-300 rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400 h-24 resize-none"
-              ></textarea>
+              ></Textarea>
             </div>
 
             <div className="md:col-span-2 flex justify-center">
-              <button
+              <Button
                 type="submit"
-                className="bg-primary hover:bg-primary text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 cursor-pointer"
+                className="bg-primary hover:bg-primary text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 cursor-pointer w-[100%]"
               >
                 {isLoading ? "Enviando..." : "Enviar Dados"}
-              </button>
+              </Button>
             </div>
           </form>
         </div>

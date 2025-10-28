@@ -13,9 +13,8 @@ export default function Formularios() {
     return (
         <div className="min-h-screen">
             <Header />
-
             <PlanodeSaude />
-            
+            <Footer />
         </div>
     ) ;
 }

@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/app/_components/ui/button";
 import {
@@ -13,7 +14,10 @@ import {
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+  const pathname = usePathname();
+  const isForm = pathname === "/formularios";
+
+  const solidHeader = isForm || scrolled;  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +31,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background shadow-[0_2px_10px_hsl(0_0%_0%/0.05)]" : "bg-transparent"
+        solidHeader ? "bg-background shadow-[0_2px_10px_hsl(0_0%_0%/0.05)]" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -37,7 +41,7 @@ export default function Header() {
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
               <img src="/logopng.png" alt="Logo"/>
             </div>
-            <span className={`font-bold text-lg ${scrolled ? "text-foreground" : "text-white"}`}>
+            <span className={`font-bold text-lg ${solidHeader ? "text-foreground" : "text-white"}`}>
               TH TECNOLOGIA
             </span>
           </Link>
@@ -47,7 +51,7 @@ export default function Header() {
             <Link href="/certificados">
               <Button
                 variant="ghost"
-                className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
               >
                 Certificado Digital
               </Button>
@@ -56,7 +60,7 @@ export default function Header() {
             <Link href="/healthplans">
               <Button
                 variant="ghost"
-                className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
               >
                 Planos e Seguros
               </Button>
@@ -65,7 +69,7 @@ export default function Header() {
             <Link href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce" target="_blank">
               <Button
                 variant="ghost"
-                className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
               >
                 Renovação
               </Button>
@@ -74,7 +78,7 @@ export default function Header() {
             <Link href="/#sobre">
               <Button
                 variant="ghost"
-                className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
               >
                 A Empresa
               </Button>
@@ -85,7 +89,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                  className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
                 >
                   Repositório <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
@@ -114,7 +118,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
+                  className={solidHeader ? "text-foreground hover:text-primary" : "text-white hover:text-primary hover:bg-white/10"}
                 >
                   Suporte <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
@@ -142,7 +146,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden ${scrolled ? "text-foreground" : "text-white"}`}
+            className={`lg:hidden ${solidHeader ? "text-foreground" : "text-white"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
