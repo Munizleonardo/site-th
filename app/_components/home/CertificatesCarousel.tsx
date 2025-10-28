@@ -1,35 +1,28 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Button } from "@/app/_components/ui/button";
-import { Shield, FileCheck, FileText, ScrollText } from "lucide-react";
+import { Shield, FileText, ScrollText } from "lucide-react";
 import Link from "next/link";
 
 const certificates = [
   {
     id: 1,
     icon: Shield,
-    title: "e-CPF A1",
-    description: "Certificado digital para pessoa física armazenado no computador. Ideal para uso individual em aplicações web.",
+    title: "e-CPF",
+    description: "Certificado digital para pessoa física armazenado no computador ou em mídia, com validade de 3 anos. Ideal para uso individual em aplicações web.",
     color: "text-blue-500",
   },
   {
     id: 2,
-    icon: FileCheck,
-    title: "e-CPF A3",
-    description: "Certificado digital para pessoa física com mídia criptografada. Maior segurança para transações importantes.",
-    color: "text-green-500",
-  },
-  {
-    id: 3,
     icon: FileText,
-    title: "e-CNPJ A1",
-    description: "Certificado digital para pessoa jurídica armazenado no computador. Perfeito para pequenas empresas.",
+    title: "e-CNPJ",
+    description: "Certificado digital para pessoa jurídica armazenado no computador ou em mídia, com validade de 3 anos. Perfeito para pequenas empresas.",
     color: "text-purple-500",
   },
   {
-    id: 4,
+    id: 3,
     icon: ScrollText,
-    title: "SafeID",
-    description: "Certificado digital para pessoa jurídica ou física em nuvem. Utilização direta no seu smartphone.",
+    title: "SafeID Nuvem",
+    description: "Certificado digital para pessoa jurídica ou física com validade de 4 anos em nuvem. Renove o seu período de uso, sem precisar de videoconferência.",
     color: "text-primary",
   },
 ];
@@ -47,14 +40,15 @@ export default function CertificatesCarousel() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
           {certificates.map((cert) => {
             const Icon = cert.icon;
             return (
               <Card key={cert.id} className="card-hover bg-card">
-                <CardHeader>
+                <CardHeader className="grid place-items-center">
                   <div className={`w-16 h-16 rounded-lg bg-accent flex items-center justify-center mb-4 ${cert.color}`}>
-                    <Icon className="h-8 w-8" />
+                    <Icon className="h-8 w-8 " />
                   </div>
                   <CardTitle className="text-xl">{cert.title}</CardTitle>
                 </CardHeader>
