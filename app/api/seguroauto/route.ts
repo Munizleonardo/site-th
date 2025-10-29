@@ -26,10 +26,10 @@ export async function POST(req: Request) {
     // 📬 Monta o conteúdo do e-mail
     const mailOptions = {
       from: `"Cotação de Seguro Auto" <${process.env.EMAIL_USER}>`,
-      to: "munizzleonardo@gmail.com", // ✅ Altere se quiser enviar para outro e-mail
-      subject: "🚘 NOVA SOLICITAÇÃO - SEGURO AUTO",
+      to: "thiago@thtecnologia.com.br", // ✅ Altere se quiser enviar para outro e-mail
+      subject: "🚘 NOVA SOLICITAÇÃO - SEGURO AUTO 🚘",
       html: `
-        <h2>Nova Solicitação de Seguro Auto</h2>
+        <h2>Nova Solicitação - Seguro Auto</h2>
         <p><strong>Nome:</strong> ${nome}</p>
         <p><strong>Telefone:</strong> ${telefone}</p>
         <p><strong>CPF/CNPJ:</strong> ${cpfCnpj}</p>
