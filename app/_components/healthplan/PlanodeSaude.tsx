@@ -28,7 +28,7 @@ export default function PlanodeSaude() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/planoesaude", {
+      const res = await fetch("/api/planodesaude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
