@@ -1,5 +1,5 @@
 
-import PlanodeSaude from "@/app/_components/PlanodeSaude"
+import PlanodeSaude from "@/app/_components/healthplan/PlanodeSaude"
 import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header"
 import { Metadata } from "next"
