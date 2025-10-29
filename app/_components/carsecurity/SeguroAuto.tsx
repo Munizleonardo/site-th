@@ -29,7 +29,7 @@ export default function SeguroAuto() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/seguro-auto", {
+      const res = await fetch("/api/seguroauto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -160,7 +160,7 @@ export default function SeguroAuto() {
                 Chassi/Placa do Veículo
               </Label>
               <Textarea
-                name="chassiPlaca" 
+                name="chassiplaca" 
                 value={formData.chassiplaca} 
                 onChange={handleChange}
                 required

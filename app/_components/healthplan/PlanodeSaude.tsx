@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { Input } from "@/app/_components/ui/input"
-import { Button } from "./ui/button";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
 
 
 export default function PlanodeSaude() {
@@ -28,7 +28,7 @@ export default function PlanodeSaude() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/sendEmail", {
+      const res = await fetch("/api/planodesaude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
