@@ -1,4 +1,5 @@
 import { Mail, Phone, Instagram } from "lucide-react";
+import Image from "next/image"
 
 export default function ContactSection() {
   return (
@@ -13,7 +14,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="flex flex-column max-w-6xl mx-auto justify-between items-center">
+        <div className="flex flex-wrap flex-column justify-center items-center max-w-6xl mx-auto sm:justify-between sm:items-center">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
@@ -50,6 +51,31 @@ export default function ContactSection() {
                   @thcertificadora
                 </a>
               </div>
+            </div>
+            <div className="text-xl font-semibold mb-4">
+                <h3 className="flex justify-center mb-3">Parceiros</h3>
+                <div className="flex justify-center gap-4 border-2 border-black-500 rounded-xl">
+                  <Image 
+                  src="/safeweb.png" 
+                  alt="Safeweb"
+                  width={64}
+                  height={64}
+                  />
+
+                  <Image 
+                  src="/ititec.jpg" 
+                  alt="ITI"
+                  width={64}
+                  height={64}
+                  />
+
+                  <Image 
+                  src="/ititec.jpg" 
+                  alt=""
+                  width={64}
+                  height={64}
+                  />
+                </div>  
             </div>
           </div>
 

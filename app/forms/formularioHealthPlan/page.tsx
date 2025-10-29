@@ -1,15 +1,15 @@
 
-import PlanodeSaude from "@/app/_components/healthplan/PlanodeSaude"
+import PlanodeSaude from "@/app/_components/PlanodeSaude"
 import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: 'Formulário Plano de Saúde',
-    description: 'Formulário Plano de Saúde.',
+    description: 'Formulário Plano de Saúde',
 }
 
-export default function Formularios() {
+export default function FormularioHealthPlan() {
     return (
         <div className="min-h-screen">
             <Header />
