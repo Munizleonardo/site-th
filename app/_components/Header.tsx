@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/app/_components/ui/button";
@@ -15,7 +16,9 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isForm = pathname === "/formularios";
+
+  const isForm = /^\/forms(?:\/|$)/.test(pathname);
+
 
   const solidHeader = isForm || scrolled;  
 
@@ -39,7 +42,12 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-              <img src="/logopng.png" alt="Logo"/>
+              <Image 
+              src="/logopng.png" 
+              alt="Logo"
+              width={100}
+              height={100}
+              />
             </div>
             <span className={`font-bold text-lg ${solidHeader ? "text-foreground" : "text-white"}`}>
               TH TECNOLOGIA

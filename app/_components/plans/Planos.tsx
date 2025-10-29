@@ -1,114 +1,74 @@
 import Header from "@/app/_components/Header";
 import { Button } from "@/app/_components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/_components/ui/card";
+import { Heart, Car, Briefcase, Home } from "lucide-react";
 import { Check } from "lucide-react";
-import Image from "next/image"
 import Link from "next/link"
 
 const plans = [
   {
     id: 1,
-    image: "/bradescp2.jpg",
-    company: "Bradesco Saúde",
+    icon: Heart,
+    company: "Plano de Saúde",
     price: "Consulte condições",
-    link:"/formularios",
-    features: [
-      "Cobertura nacional",
-      "Telemedicina incluída",
-      "Rede credenciada premium",
-      "Sem carência para urgência",
-    ],
+    link:"/forms/formularioHealthPlan",
+    
   },
   {
     id: 2,
-    image: "/sulamerica.png",
-    company: "SulAmérica",
+    icon: Car,
+    company: "Seguro Auto",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Até 6 dependentes",
-      "Cobertura completa",
-      "Melhores hospitais",
-      "Atendimento 24h",
-    ],
+    link:"/forms/formularioSecurityCar",
+    
   },
   {
     id: 3,
-    image: "/amil.png",
-    company: "Amil",
+    icon: Heart,
+    company: "Seguro de Vida",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "A partir de 2 vidas",
-      "Descontos progressivos",
-      "Gestão simplificada",
-      "Sem limite de idade",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
   {
     id: 4,
-    image: "/unimed.png",
-    company: "Unimed",
+    icon: Home,
+    company: "Seguro Empresarial",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Livre escolha de médicos",
-      "Cobertura internacional",
-      "Check-up anual gratuito",
-      "Programa de bem-estar",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
   {
     id: 5,
-    image: "/assim.png",
-    company: "Assim Saúde",
+    icon: Briefcase,
+    company: "Seguro Fiança",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Livre escolha de médicos",
-      "Cobertura internacional",
-      "Check-up anual gratuito",
-      "Programa de bem-estar",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
   {
     id: 6,
-    image: "/portoseguro.jpg",
-    company: "Porto Seguro",
+    icon: Home,
+    company: "Financiamento Imóvel",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Livre escolha de médicos",
-      "Cobertura internacional",
-      "Check-up anual gratuito",
-      "Programa de bem-estar",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
   {
     id: 7,
-    image: "/allianz.jpg",
-    company: "Allianz Seguradora",
+    icon: Car,
+    company: "Financiamento Veículo",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Liberdade de locomoção",
-      "Cobertura nacional",
-      "Reboque 24h",
-      "Auxílio Manutenção",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
   {
     id: 8,
-    image: "/liberty123.jpg",
-    company: "Liberty Seguros",
+    icon: Home,
+    company: "Seguro Residencial",
     price: "Consulte condições",
-    link:"",
-    features: [
-      "Liberdade de locomoção",
-      "Cobertura nacional",
-      "Reboque 24h",
-      "Auxílio Manutenção",
-    ],
+    link:"https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0",
+    
   },
 ];
 
@@ -133,16 +93,17 @@ export default function Planos() {
       </section>
 
       {/* Plans Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background justify-center items-center text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Solicite Cotação</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan) => {
+              const Icon = plan.icon;
               return (
                 <Card key={plan.id} className="card-hover border-2">
                   <CardHeader>
                     <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Image src={plan.image} alt={plan.company} width={50} height={50} />
+                      <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-2xl">{plan.company}</CardTitle>
                     
@@ -150,12 +111,7 @@ export default function Planos() {
                   <CardContent>
                     <p className="text-2xl font-bold text-primary mb-4">{plan.price}</p>
                     <ul className="space-y-2 mb-6">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2">
-                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
+                     
                     </ul>
                   </CardContent>
                   <div className="flex justify-center aling-center">
@@ -175,7 +131,7 @@ export default function Planos() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Não encontrou o plano ideal?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ficou com Dúvida?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Entre em contato conosco! Nossa equipe especializada vai encontrar o plano 
             perfeito para suas necessidades e orçamento.

@@ -18,10 +18,10 @@ export async function POST(req: Request) {
     // Corpo do e-mail
     const mailOptions = {
       from: `"Cotação de Plano de Saúde" <${process.env.EMAIL_USER}>`,
-      to: "munizzleonardo@gmail.com", // 🔹 Mude para o e-mail que vai receber
-      subject: "Nova solicitação de cotação",
+      to: "thiago@thtecnologia.com.br", // 🔹 Mude para o e-mail que vai receber
+      subject: "NOVA SOLICITAÇÃO",
       html: `
-        <h2>Nova solicitação de cotação</h2>
+        <h2>Nova Solicitação</h2>
         <p><strong>Nome:</strong> ${nome}</p>
         <p><strong>Telefone:</strong> ${telefone}</p>
         <p><strong>CPF/CNPJ:</strong> ${cpfCnpj}</p>

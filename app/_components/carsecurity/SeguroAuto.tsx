@@ -6,15 +6,16 @@ import { Textarea } from "../ui/textarea";
 import { Label } from "../ui/label";
 
 
-export default function PlanodeSaude() {
+
+export default function SeguroAuto() {
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
     cpfCnpj: "",
     cidade: "",
     bairro: "",
-    qtdVidas: "",
-    idades: "",
+    cep: "",
+    chassiplaca: "",
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +29,7 @@ export default function PlanodeSaude() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/sendEmail", {
+      const res = await fetch("/api/seguro-auto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -44,8 +45,8 @@ export default function PlanodeSaude() {
           cpfCnpj: "",
           cidade: "",
           bairro: "",
-          qtdVidas: "",
-          idades: "",
+          cep: "",
+          chassiplaca: "",
         });
       } else {
         alert("Erro ao enviar: " + data.message);
@@ -63,7 +64,7 @@ export default function PlanodeSaude() {
       <main className="bg-gray-50 flex flex-col items-center min-h-[80vh] justify-center">
         <div className="max-w-3xl w-full bg-white p-8 rounded-2xl shadow-md">
           <h1 className="text-2xl font-bold text-center text-primary mb-6">
-            Solicitação de Cotação de Plano de Saúde
+            Solicitação de Cotação de Seguro Carro/Moto
           </h1>
 
           <form
@@ -140,15 +141,15 @@ export default function PlanodeSaude() {
             
             <div className="flex flex-col">
               <Label className="font-semibold text-gray-700">
-                Número de Dependentes
+                CEP
               </Label>
               <Input
                 type="number"
-                name="qtdVidas"
-                value={formData.qtdVidas}
+                name="cep"
+                value={formData.cep}
                 onChange={handleChange}
                 required
-                min={1}
+                placeholder="00000-000"
                 className="border border-gray-300 rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
@@ -156,16 +157,16 @@ export default function PlanodeSaude() {
             
             <div className="flex flex-col md:col-span-2">
               <Label className="font-semibold text-gray-700">
-                Idades das Vidas
+                Chassi/Placa do Veículo
               </Label>
               <Textarea
-                name="idades"
-                value={formData.idades}
+                name="chassiPlaca" 
+                value={formData.chassiplaca} 
                 onChange={handleChange}
                 required
-                placeholder="Ex: 25, 32, 40..."
+                placeholder="Ex: xxxxxx/abc-1234"
                 className="border border-gray-300 rounded-lg p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400 h-24 resize-none"
-              ></Textarea>
+              />
             </div>
 
             <div className="md:col-span-2 flex justify-center">
@@ -181,4 +182,4 @@ export default function PlanodeSaude() {
       </main>
 
   );
-}
+};

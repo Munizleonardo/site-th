@@ -1,14 +1,10 @@
 import Link from "next/link"
-import { Instagram, Facebook, Linkedin } from "lucide-react";
-
-function getCurrentYear() {
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  return currentYear;
-}
-const year = getCurrentYear();
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
