@@ -69,12 +69,6 @@ export default function ContactSection() {
                   height={64}
                   />
 
-                  <Image 
-                  src="/ititec.jpg" 
-                  alt=""
-                  width={64}
-                  height={64}
-                  />
                 </div>  
             </div>
           </div>

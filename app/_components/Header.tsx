@@ -43,14 +43,14 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
               <Image 
-              src="/logopng.png" 
+              src="/logonovaTH.jpg" 
               alt="Logo"
               width={100}
               height={100}
               />
             </div>
             <span className={`font-bold text-lg ${solidHeader ? "text-foreground" : "text-white"}`}>
-              TH TECNOLOGIA
+              TH TECNOLOGIA E CONSULTORIA LTDA
             </span>
           </Link>
 
@@ -176,7 +176,63 @@ export default function Header() {
             <Link href="/#sobre" className="block px-4 py-2 hover:bg-accent">
               A Empresa
             </Link>
+
+            {/* Repositório Dropdown */}
+            <div className="flex flex-col">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="w-[50%]">
+                  Repositório <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="block px-4 py-2 hover:bg-accent">
+              <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://thtecnologia.com.br/dou.pdf" target="_blank">
+                    Diário Oficial
+                  </Link>
+                </DropdownMenuItem> 
+                <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://thtecnologia.com.br/cd.pdf" target="_blank">
+                    Declaração de Práticas CD
+                  </Link>
+                </DropdownMenuItem> 
+                <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://thtecnologia.com.br/rfb.pdf" target="_blank">
+                    Declaração de Práticas RFB
+                  </Link>
+                </DropdownMenuItem> 
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Suporte Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="w-[50%]">
+                  Suporte <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="block px-4 py-2 hover:bg-accent">
+                <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://safeweb.com.br/suporte/instalacao" target="_blank">
+                    Instalar Certificado
+                  </Link>
+                </DropdownMenuItem> 
+                <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://safeweb.com.br/suporte/centraldedownloads" target="_blank">
+                    Download Drivers
+                  </Link>
+                </DropdownMenuItem> 
+                <DropdownMenuItem className="cursor-pointer" asChild>
+                  <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
+                    Dúvidas Gerais
+                  </Link>
+                </DropdownMenuItem> 
+                
+              </DropdownMenuContent>
+            </DropdownMenu>
+            </div>
           </div>
+          
         )}
       </div>
     </header>

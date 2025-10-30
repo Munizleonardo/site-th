@@ -157,3 +157,12 @@
     @apply bg-background text-foreground;
 }
 }
+
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: flash 2s ease-in-out infinite;
+}

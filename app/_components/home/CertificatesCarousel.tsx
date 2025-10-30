@@ -7,21 +7,21 @@ const certificates = [
   {
     id: 1,
     icon: Shield,
-    title: "e-CPF",
+    title: "Pessoa Física - e-CPF",
     description: "Certificado digital para pessoa física armazenado no computador ou em mídia, com validade de 3 anos. Ideal para uso individual em aplicações web.",
     color: "text-blue-500",
   },
   {
     id: 2,
     icon: FileText,
-    title: "e-CNPJ",
+    title: "Pessoa Jurídica - e-CNPJ",
     description: "Certificado digital para pessoa jurídica armazenado no computador ou em mídia, com validade de 3 anos. Perfeito para pequenas empresas.",
     color: "text-purple-500",
   },
   {
     id: 3,
     icon: ScrollText,
-    title: "SafeID Nuvem",
+    title: "SafeID Nuvem - PJ/PF",
     description: "Certificado digital para pessoa jurídica ou física com validade de 4 anos em nuvem. Renove o seu período de uso, sem precisar de videoconferência.",
     color: "text-primary",
   },
@@ -65,7 +65,7 @@ export default function CertificatesCarousel() {
         <div className="flex justify-center aling-center mt-8">
           <Link href="/certificados">
             <Button variant="outline" className="w-80 hover:bg-primary hover:text-primary-foreground">
-              Mais Informações
+              Confira os Produtos
             </Button>
           </Link>
         </div>

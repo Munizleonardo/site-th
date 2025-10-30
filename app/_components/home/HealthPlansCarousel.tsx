@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/_components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Button } from "@/app/_components/ui/button";
 import { Heart, Car, Briefcase, Home } from "lucide-react";
 import Link from "next/link"
@@ -7,30 +7,26 @@ const healthPlans = [
   {
     id: 1,
     icon: Heart,
-    link:"/forms/formularioHealthPlan",
+    link:"/healthplans",
     company: "Plano de Saúde",
-    description: "Plano completo para você que busca qualidade e segurança na saúde. Rede credenciada ampla e atendimento premium.",
   },
   {
     id: 2,
     icon: Car,
-    link:"/forms/formularioSecurityCar",
+    link:"/healthplans",
     company: "Seguro Auto",
-    description: "Proteja seu carro ou sua moto e tenha segurança para viajar com sua família. Cobertura nacional para se locomover com segurança.",
   },
   {
     id: 3,
     icon: Briefcase,
-    link:"https://wa.me/5521970686270",
+    link:"/healthplans",
     company: "Seguro Empresarial",
-    description: "Soluções personalizadas para sua empresa. Cuide da saúde dos seus colaboradores com economia.",
   },
   {
     id: 4,
     icon: Home,
-    link:"https://wa.me/5521970686270",
+    link:"/healthplans",
     company: "Seguro Residencial",
-    description: "Proteja sua família de forma consciente. Em todos os momentos de sua vida.",
   },
 ];
 
@@ -47,38 +43,31 @@ export default function HealthPlansCarousel() {
           </p>
         </div>
 
-        <div className="flex justify-center gap-6 flex-wrap sm:flex-row flex-col">
+        <div className="flex justify-center gap-4 flex-wrap sm:flex-row flex-col sm:w-[100%] w-[100%]">
           {healthPlans.map((plan) => {
             const Icon = plan.icon;
             return (
-              <Card key={plan.id} className="flex-1 sm:max-w-[25%] max-w-[100%] px-4 justify-between">
-                <CardHeader>
-                  <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Card key={plan.id} className="flex-1 sm:max-w-[25%] max-w-[100%] px-4 justify-between gap-2">
+                <CardHeader className="grid place-items-center">
+                  <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center ">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{plan.company}</CardTitle>
-                  <p className="text-sm font-semibold text-primary"></p>
+                  <CardTitle className="text-2xl">{plan.company}</CardTitle>
+                  
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {plan.description}
-                  </CardDescription>
-                </CardContent>
                   <Link className="px-4" href={plan.link} target="_blank">
                     <Button variant="outline" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
-                      Solicitar Cotação
+                      Mais Informações
                     </Button>
                   </Link>  
               </Card>
             );
           })}
         </div>
-        <Link href="/healthplans" target="_blank">
-          <Button variant="outline" className="w-75 bg-primary hover:bg-primary-hover text-primary-foreground">
-            Mais Informações
-          </Button>
-        </Link>
-      </div>
+        <p className="sm:text-4xl text-2xl font-bold text-primary max-w-2xl mx-auto animate-flash">
+          Realize uma cotação sem compromisso
+        </p>
+      </div>  
     </section>
-  );
-};
+)};
+
