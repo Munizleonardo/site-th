@@ -3,7 +3,7 @@
 Repositório do site da TH Tecnologia e Consultoria LTDA, que oferece serviços de planos de saúde, seguros e certificados digitais. Este projeto tem como objetivo fornecer uma plataforma digital moderna, responsiva e intuitiva para usuários finais e empresas.
 --------
 This is the repository for the website of TH Tecnologia e Consultoria LTDA, which offers health plans, insurance, and digital certificates. This project aims to provide a modern, responsive, and intuitive digital platform for end users and businesses.
-
+----------
 ##Tecnologias Utilizadas - Technologies Used
 
 - Frontend: React / Next.js
@@ -35,7 +35,7 @@ This is the repository for the website of TH Tecnologia e Consultoria LTDA, whic
 - Online quote forms
 - Responsive layout, adaptable for desktop and mobile devices
 - Intuitive and user-friendly navigation
-
+----------
 ##Publicado no Vercel - Published on Vercel
 
 Link: https://site-th.vercel.app/
