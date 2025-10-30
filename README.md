@@ -1,9 +1,9 @@
 ##TH Tecnologia e Consultoria LTDA
 
 Repositório do site da TH Tecnologia e Consultoria LTDA, que oferece serviços de planos de saúde, seguros e certificados digitais. Este projeto tem como objetivo fornecer uma plataforma digital moderna, responsiva e intuitiva para usuários finais e empresas.
---------
+<br>
 This is the repository for the website of TH Tecnologia e Consultoria LTDA, which offers health plans, insurance, and digital certificates. This project aims to provide a modern, responsive, and intuitive digital platform for end users and businesses.
-----------
+----------------------------
 ##Tecnologias Utilizadas - Technologies Used
 
 - Frontend: React / Next.js
@@ -11,13 +11,14 @@ This is the repository for the website of TH Tecnologia e Consultoria LTDA, whic
 - Gerenciamento de estado: React Hooks / Context API
 - Imagens e ícones: SVG, PNG, bibliotecas de ícones
 - Outros recursos: Integração com formulários de cotação e sistemas de certificados digitais
---------
+<br>
 - Frontend: React / Next.js
 - Styling: Tailwind CSS, custom components
 - State management: React Hooks / Context API
 - Images and icons: SVG, PNG, icon libraries
 - Other features: Integration with quote forms and digital certificate systems
------------
+<br>
+-------------------------------
 ##Funcionalidades Principais - Main Features
 
 - Página inicial com apresentação dos serviços da empresa
@@ -27,7 +28,7 @@ This is the repository for the website of TH Tecnologia e Consultoria LTDA, whic
 - Formulários de cotação online
 - Layout responsivo, adaptável para desktop e dispositivos móveis
 - Navegação intuitiva e amigável
---------
+<br>
 - Homepage showcasing the company's services
 - Health plan section with detailed information
 - Insurance section for individuals and businesses
@@ -35,7 +36,7 @@ This is the repository for the website of TH Tecnologia e Consultoria LTDA, whic
 - Online quote forms
 - Responsive layout, adaptable for desktop and mobile devices
 - Intuitive and user-friendly navigation
-----------
+--------------------------------
 ##Publicado no Vercel - Published on Vercel
 
 Link: https://site-th.vercel.app/
