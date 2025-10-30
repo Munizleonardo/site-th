@@ -17,7 +17,7 @@ This is the repository for the website of TH Tecnologia e Consultoria LTDA, whic
 - State management: React Hooks / Context API
 - Images and icons: SVG, PNG, icon libraries
 - Other features: Integration with quote forms and digital certificate systems
-
+-----------
 ##Funcionalidades Principais - Main Features
 
 - Página inicial com apresentação dos serviços da empresa
