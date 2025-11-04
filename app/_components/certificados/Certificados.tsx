@@ -10,7 +10,7 @@ const certificates = [
     icon: Shield,
     title: "e-CPF A1",
     validity: "1 ano",
-    price: "A partir de R$ 170,00",
+    price: "R$ 170,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/cb61f5c6-2749-4e78-9aa8-118618c46840",
     features: [
       "Armazenado no computador",
@@ -24,7 +24,7 @@ const certificates = [
     icon: FileCheck,
     title: "e-CPF A3",
     validity: "3 anos - Só Certificado",
-    price: "A partir de R$ 249,90",
+    price: "R$ 249,90",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4568f27-d2a2-437b-9513-90cb6d7c03ed",
     features: [
       "Token ou Cartão com chip",
@@ -38,7 +38,7 @@ const certificates = [
     icon: FileText,
     title: "e-CNPJ A1",
     validity: "1 ano",
-    price: "A partir de R$ 240,00",
+    price: "R$ 240,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/d61fa9c3-ad5f-41f9-b058-6743d2d182ad",
     features: [
       "Para pessoa jurídica",
@@ -52,7 +52,7 @@ const certificates = [
     icon: ScrollText,
     title: "e-CNPJ A3",
     validity: "3 anos - Só Certificado",
-    price: "A partir de R$ 299,90",
+    price: "R$ 299,90",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/f1aebe8d-4649-4977-87ea-97678917967a",
     features: [
       "Máxima segurança empresarial",
@@ -66,7 +66,7 @@ const certificates = [
     icon: Shield,
     title: "e-CPF - SafeID",
     validity: "1 ano (4 anos em nuvem)",
-    price: "A partir de R$ 170,00",
+    price: "R$ 170,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/573e9949-1ab4-474b-b8c4-d6237160eea8",
     features: [
       "Utilização pelo celular",
@@ -80,7 +80,7 @@ const certificates = [
     icon: FileCheck,
     title: "NF-e",
     validity: "1 ano",
-    price: "A partir de R$ 150,00",
+    price: "R$ 150,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/eb1246d2-45a2-4eaf-bea7-e9ee9d7b3535",
     features: [
       "Emissão de Notas Fiscais",
@@ -94,7 +94,7 @@ const certificates = [
     icon: FileText,
     title: "OAB A3",
     validity: "3 anos - Só Certificado",
-    price: "A partir de R$ 130,00",
+    price: "R$ 130,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4850e25-d0fe-4fc9-bbb5-656a074dc904",
     features: [
       "Certificado digital para Advogados",
@@ -108,7 +108,7 @@ const certificates = [
     icon: ScrollText,
     title: "e-PJ A1",
     validity: "1 ano",
-    price: "A partir de R$ 250,00",
+    price: "R$ 250,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e51aa6ce-4e11-44e7-a4ee-c472a68cebaf",
     features: [
       "Voltado para Empresas Inativas",
@@ -127,7 +127,7 @@ export default function Certificados() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-accent to-background">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-gradient">
             Certificados Digitais
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ export default function Certificados() {
               return (
                 <Card key={cert.id} className="card-hover">
                   <CardHeader>
-                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-2xl">{cert.title}</CardTitle>
@@ -153,7 +153,7 @@ export default function Certificados() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-2xl font-bold text-primary mb-4">{cert.price}</p>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-3">
                       {cert.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-2">
                           <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -178,7 +178,7 @@ export default function Certificados() {
       <section id="midia" className="py-10 mb-4">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Precisa de Mídia?</h2>
+            <h2 className="text-4xl font-bold mb-6">Precisa de Mídia Para Seu Certificado Digital?</h2>
             <p className="text-lg text-muted-foreground mb-8">
             O certificado digital A3 é considerado mais seguro do que o A1, que fica armazenado no computador. O uso de uma mídia física, como um token USB ou um smart card(cartão), garante a integridade e a autenticidade das transações digitais, pois a chave privada do certificado é armazenada de forma segura e não pode ser copiada para outro dispositivo. 
             </p>

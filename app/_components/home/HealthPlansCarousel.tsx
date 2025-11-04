@@ -47,7 +47,7 @@ export default function HealthPlansCarousel() {
           {healthPlans.map((plan) => {
             const Icon = plan.icon;
             return (
-              <Card key={plan.id} className="flex-1 sm:max-w-[25%] max-w-[100%] px-4 justify-between gap-2">
+              <Card key={plan.id} className="flex-1 sm:flex sm:flex-col sm:max-w-[100%] max-w-[100%] px-4 justify-between gap-2">
                 <CardHeader className="grid place-items-center">
                   <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center ">
                     <Icon className="h-8 w-8 text-primary" />

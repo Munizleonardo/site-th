@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Instagram } from "lucide-react";
+import LogoParks from "@/app/_components/LogoParks";
+
 
 export default function Footer() {
 
@@ -72,6 +74,13 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      <div className="flex items-center justify-center space-x-2">
+          <p className="text-primary-foreground/98">Desenvolvido por</p>
+          <Link href="https://parkscompany.com.br" target="_blank">
+            <LogoParks />
+          </Link>
+        </div>
     </footer>
   );
 };
+ 
