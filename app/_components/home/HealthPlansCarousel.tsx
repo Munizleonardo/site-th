@@ -55,7 +55,7 @@ export default function HealthPlansCarousel() {
                   <CardTitle className="text-2xl">{plan.company}</CardTitle>
                   
                 </CardHeader>
-                  <Link className="px-4" href={plan.link} target="_blank">
+                  <Link className="px-4" href={plan.link}>
                     <Button variant="outline" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
                       Mais Informações
                     </Button>

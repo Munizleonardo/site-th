@@ -27,7 +27,7 @@ const certificates = [
     price: "R$ 249,90",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4568f27-d2a2-437b-9513-90cb6d7c03ed",
     features: [
-      "Token ou Cartão com chip",
+      "Necessita de Mídia",
       "Maior segurança",
       "Ideal para empresários",
       "Portabilidade garantida",
@@ -56,7 +56,7 @@ const certificates = [
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/f1aebe8d-4649-4977-87ea-97678917967a",
     features: [
       "Máxima segurança empresarial",
-      "Token ou Cartão",
+      "Necessita de Mídia",
       "Assinatura digital de documentos",
       "Conformidade legal garantida",
     ],
@@ -80,7 +80,7 @@ const certificates = [
     icon: FileCheck,
     title: "NF-e",
     validity: "1 ano",
-    price: "R$ 150,00",
+    price: "R$ 240,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/eb1246d2-45a2-4eaf-bea7-e9ee9d7b3535",
     features: [
       "Emissão de Notas Fiscais",
@@ -98,7 +98,7 @@ const certificates = [
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4850e25-d0fe-4fc9-bbb5-656a074dc904",
     features: [
       "Certificado digital para Advogados",
-      "Token ou Cartão",
+      "Validade Jurídica",
       "Portabilidade Garantida",
       "Conformidade legal garantida",
     ],
