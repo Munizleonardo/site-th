@@ -143,6 +143,9 @@ export default function Planos() {
       {/* Operators Section */}
       <section className="py-5">
         {/* Sem título */}
+        <p className="text-4xl font-bold text-center mt-5 mb-2">
+          Operadoras Parceiras
+          </p> 
             <div className="flex flex-wrap sm:flex-row items-center justify-center sm:max-w-[100%] max-w-[100%]">
               <Image 
               src="/amil.png" 
