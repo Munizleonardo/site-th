@@ -159,7 +159,7 @@ export default function Planos() {
               />   
 
               <Image 
-              src="/portoseguro.jpg" 
+              src="/porto.png" 
               alt="Porto Seguro" 
               width={100}
               height={100}
@@ -191,7 +191,56 @@ export default function Planos() {
               alt="Leve Saude" 
               width={100}
               height={100}
-              />     
+              />   
+
+              <Image 
+              src="/amep.png" 
+              alt="Amep" 
+              width={100}
+              height={100}
+              />  
+
+              <Image 
+              src="/klini.png" 
+              alt="Klini" 
+              width={100}
+              height={100}
+              />  
+
+              <Image 
+              src="/notredame.png" 
+              alt="Notredame" 
+              width={100}
+              height={100}
+              />  
+  
+              <Image 
+              src="/azul.png" 
+              alt="Azul Seguros" 
+              width={100}
+              height={100}
+              />  
+
+              <Image 
+              src="/itau.png" 
+              alt="Itau Seguros" 
+              width={100}
+              height={100}
+              />  
+
+              <Image 
+              src="/suhai.png" 
+              alt="Suhai" 
+              width={100}
+              height={100}
+              />  
+
+              <Image 
+              src="/tokyo.png" 
+              alt="Tokyo Seguros" 
+              width={100}
+              height={100}
+              />  
             </div>  
       </section>
 

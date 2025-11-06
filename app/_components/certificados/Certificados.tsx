@@ -27,7 +27,7 @@ const certificates = [
     price: "R$ 249,90",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4568f27-d2a2-437b-9513-90cb6d7c03ed",
     features: [
-      "Necessita de Mídia",
+      "Necessita de mídia",
       "Maior segurança",
       "Ideal para empresários",
       "Portabilidade garantida",
@@ -56,7 +56,7 @@ const certificates = [
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/f1aebe8d-4649-4977-87ea-97678917967a",
     features: [
       "Máxima segurança empresarial",
-      "Necessita de Mídia",
+      "Necessita de mídia",
       "Assinatura digital de documentos",
       "Conformidade legal garantida",
     ],
@@ -83,9 +83,9 @@ const certificates = [
     price: "R$ 240,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/eb1246d2-45a2-4eaf-bea7-e9ee9d7b3535",
     features: [
-      "Emissão de Notas Fiscais",
-      "Simplificação Fiscal",
-      "Vinculação a Terceiros",
+      "Emissão de notas fiscais",
+      "Simplificação fiscal",
+      "Vinculação a terceiros",
       "Conformidade legal garantida",
     ],
   },
@@ -97,9 +97,9 @@ const certificates = [
     price: "R$ 130,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e4850e25-d0fe-4fc9-bbb5-656a074dc904",
     features: [
-      "Certificado digital para Advogados",
-      "Validade Jurídica",
-      "Portabilidade Garantida",
+      "Certificado digital para advogados",
+      "Validade jurídica",
+      "Assinatura digital de documentos",
       "Conformidade legal garantida",
     ],
   },
@@ -111,10 +111,10 @@ const certificates = [
     price: "R$ 250,00",
     link:"https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e51aa6ce-4e11-44e7-a4ee-c472a68cebaf",
     features: [
-      "Voltado para Empresas Inativas",
-      "Emissão de Notas Fiscais",
+      "Voltado para empresas inativas",
+      "Emissão de notas fiscais",
       "Assinatura digital de documentos",
-      "Regularização de Empresas",
+      "Regularização de empresas",
     ],
   },
 ];
@@ -175,8 +175,8 @@ export default function Certificados() {
       </section>
 
       {/* Mídia Section */}
-      <section id="midia" className="py-10 mb-4">
-        <div className="container mx-auto px-4">
+      <section id="midia" className="py-10 mb-4 flex flex-wrap gap-3">
+        <div className="mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Precisa de Mídia Para Seu Certificado Digital?</h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -214,6 +214,7 @@ export default function Certificados() {
                     </Link>
                   </CardContent>
                 </Card>
+
           </div>
         </div>
       </section>
