@@ -64,7 +64,7 @@ export default function HealthPlansCarousel() {
             );
           })}
         </div>
-        <p className="sm:text-4xl text-2xl font-bold text-primary max-w-2xl mx-auto animate-flash">
+        <p className="sm:flex sm:justify-center sm:text-2xl flex justify-center text-2xl font-bold text-primary max-w-2xl mx-auto animate-flash">
           Realize uma cotação sem compromisso
         </p>
       </div>  

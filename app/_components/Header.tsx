@@ -41,9 +41,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+            <div className="w-12 h-12 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
               <Image 
-              src="/logonovaTH.jpg" 
+              src="/favicon.png" 
               alt="Logo"
               width={100}
               height={100}

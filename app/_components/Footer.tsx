@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-primary font-bold text-xl">
-                <img src="/logonovaTH.jpg" alt="Logo" />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center text-primary font-bold text-xl">
+                <img src="/favicon.png" alt="Logo" />
               </div>
               <span className="font-bold text-xl">TH TECNOLOGIA E CONSULTORIA LTDA</span>
             </div>
