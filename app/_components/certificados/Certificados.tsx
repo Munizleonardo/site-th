@@ -1,3 +1,5 @@
+"use client"
+
 import Header from "@/app/_components/Header";
 import Link from "next/link";
 import { Button } from "@/app/_components/ui/button";
@@ -8,6 +10,8 @@ import {
   CardTitle,
 } from "@/app/_components/ui/card";
 import { Shield, FileCheck, FileText, ScrollText, Check } from "lucide-react";
+
+import { useState } from "react";
 
 const certificates = [
   {
@@ -125,13 +129,16 @@ const certificates = [
 ];
 
 export default function Certificados() {
+  const [cep, setCep] = useState("");
+  const [mediaType, setMediaType] = useState("");
+  const [needReader, setNeedReader] = useState("");
+  
   return (
     <div className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="from-accent to-background bg-gradient-to-br pt-32 pb-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-background py-">
+      <div className="mb-4 mt-4 container mx-auto px-4 text-center">
           <h1 className="text-gradient mb-2 text-5xl font-bold md:text-6xl">
             Certificados Digitais
           </h1>
@@ -140,10 +147,6 @@ export default function Certificados() {
             nossos certificados ICP-Brasil
           </p>
         </div>
-      </section>
-
-      {/* Certificates Grid */}
-      <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {certificates.map((cert) => {
@@ -184,153 +187,134 @@ export default function Certificados() {
         </div>
       </section>
 
-      {/* Mídia Section */}
-      <section id="midia" className="mb-4 flex flex-wrap gap-3 py-10">
-        <div className="mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-4xl font-bold">
-              Precisa de Mídia Para Seu Certificado Digital?
+
+      <section className="max-w-4xl mt-6 mx-auto px-6">
+        <div className="bg-white rounded-3xl border p-10 flex flex-col gap-10 mb-10">
+
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              Precisa de Mídia?
             </h2>
-            <p className="text-muted-foreground mb-8 text-lg">
-              O certificado digital A3 é considerado mais seguro do que o A1,
-              que fica armazenado no computador. O uso de uma mídia física, como
-              um token USB ou um smart card(cartão), garante a integridade e a
-              autenticidade das transações digitais, pois a chave privada do
-              certificado é armazenada de forma segura e não pode ser copiada
-              para outro dispositivo.
+            <p className="text-lg text-gray-600">
+              Informe os dados abaixo para cotação de envio da mídia.
             </p>
-
-            <Card className="card-hover mx-auto h-90 w-90">
-              <CardHeader>
-                <div className="bg-primary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg">
-                  <svg
-                    width="70"
-                    height="70"
-                    viewBox="0 0 70 70"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="35" cy="35" r="35" fill="currentColor"></circle>
-                    <rect
-                      x="17.644"
-                      y="20.9998"
-                      width="38.4648"
-                      height="24.8695"
-                      rx="4"
-                      fill="currentColor"
-                      stroke="white"
-                    ></rect>
-                    <rect
-                      x="18.144"
-                      y="26.3176"
-                      width="37.4648"
-                      height="5.78791"
-                      fill="white"
-                      stroke="white"
-                    ></rect>
-                    <rect
-                      x="48.4727"
-                      y="40.1051"
-                      width="5.09093"
-                      height="3.11113"
-                      rx="1.55556"
-                      fill="white"
-                    ></rect>
-                    <path
-                      d="M18.3776 39.6805H31.3216V49.4358H18.3776C15.6838 49.4358 13.5 47.252 13.5 44.5582C13.5 41.8643 15.6838 39.6805 18.3776 39.6805Z"
-                      fill="currentColor"
-                      stroke="white"
-                    ></path>
-                    <path
-                      d="M31.6885 42.1091H32.8619C33.5198 42.1091 34.0531 42.6424 34.0531 43.3003V46.0864C34.0531 46.7443 33.5198 47.2776 32.8619 47.2776H31.6885V42.1091Z"
-                      fill="currentColor"
-                      stroke="white"
-                    ></path>
-                    <path
-                      d="M32.0312 43.883C32.0312 43.777 32.1172 43.691 32.2232 43.691H33.3748C33.4808 43.691 33.5667 43.777 33.5667 43.883V43.883C33.5667 43.989 33.4808 44.0749 33.3748 44.0749H32.2232C32.1172 44.0749 32.0312 43.989 32.0312 43.883V43.883Z"
-                      fill="white"
-                    ></path>
-                    <path
-                      d="M32.0312 45.0345C32.0312 44.9285 32.1172 44.8425 32.2232 44.8425H33.3748C33.4808 44.8425 33.5667 44.9285 33.5667 45.0345V45.0345C33.5667 45.1405 33.4808 45.2264 33.3748 45.2264H32.2232C32.1172 45.2264 32.0312 45.1405 32.0312 45.0345V45.0345Z"
-                      fill="white"
-                    ></path>
-                  </svg>
-                </div>
-                <CardTitle className="text-2xl">Mídia Certificado A3</CardTitle>
-                <p className="text-foreground text-sm">
-                  Token ou Cartão para envio imediato
-                </p>
-                <p className="text-15 text-foreground">Valor + Frete</p>
-                <p className="text-muted-foreground text-sm">
-                  OBS: Para cartões é necessário leitora, consulte informações.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-primary mb-4 text-2xl font-bold"></p>
-
-                <Link
-                  href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0"
-                  target="_blank"
-                >
-                  <Button className="bg-primary hover:bg-primary-hover w-60">
-                    Solicitar Agora
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
           </div>
+
+          <div className="flex flex-col gap-3">
+            <label className="text-lg font-semibold text-gray-800">
+              CEP de Entrega
+            </label>
+            <input
+              type="text"
+              value={cep}
+              onChange={(e) => setCep(e.target.value)}
+              placeholder="00000-000"
+              className="h-14 px-4 rounded-xl border border-gray-300 text-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+
+          {cep.length >= 8 && (
+            <div className="flex flex-col gap-3">
+              <label className="text-lg font-semibold text-gray-800">
+                Tipo de Mídia
+              </label>
+              <select
+                value={mediaType}
+                onChange={(e) => {
+                  setMediaType(e.target.value);
+                  setNeedReader("");
+                }}
+                className="h-14 px-4 rounded-xl border border-gray-300 text-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              >
+                <option value="">Selecione</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Token">Token</option>
+              </select>
+            </div>
+          )}
+
+          {mediaType === "Cartão" && (
+            <div className="flex flex-col gap-3">
+              <label className="text-lg font-semibold text-gray-800">
+                Necessita Leitora?
+              </label>
+              <select
+                value={needReader}
+                onChange={(e) => setNeedReader(e.target.value)}
+                className="h-14 px-4 rounded-xl border border-gray-300 text-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              >
+                <option value="">Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </div>
+          )}
+
+          {cep &&
+            mediaType &&
+            (mediaType !== "Cartão" || needReader) && (
+              <a
+                href={`https://wa.me/5521970686270?text=${encodeURIComponent(
+                  `Olá! Gostaria de comprar uma mídia do tipo ${mediaType} para entrega no CEP ${cep}.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 h-16 rounded-xl bg-primary hover:bg-primary/80 text-white text-lg font-semibold flex items-center justify-center transition"
+              >
+                Solicitar Cotação WhatsApp
+              </a>
+            )}
+
         </div>
       </section>
 
-      {/* Renewal Section */}
-      <section id="renovacao" className="bg-accent py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-4xl font-bold">
-              Renovação de Certificado
-            </h2>
-            <p className="text-muted-foreground mb-8 text-lg">
-              Seu certificado está vencendo? Renove agora de forma rápida e sem
-              complicações. Garantimos o melhor preço e atendimento
-              personalizado.
-            </p>
-            <Link
-              href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce"
-              target="_blank"
-            >
-              <Button className="btn-hero">Renovar Agora</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Info Section */}
-      <section className="bg-background py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-4xl font-bold">
-              O que é Certificado Digital?
-            </h2>
-            <div className="prose prose-lg mx-auto">
-              <p className="text-muted-foreground mb-4">
-                O Certificado Digital é uma identidade eletrônica que permite a
-                identificação segura e inequívoca do autor de uma mensagem ou
-                transação feita em meios eletrônicos, como a internet.
+        <section id="renovacao" className="bg-accent py-20">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="mb-6 text-4xl font-bold">
+                Renovação de Certificado
+              </h2>
+              <p className="text-muted-foreground mb-8 text-lg">
+                Seu certificado está vencendo? Renove agora de forma rápida e sem
+                complicações. Garantimos o melhor preço e atendimento
+                personalizado.
               </p>
-              <p className="text-muted-foreground mb-4">
-                Funciona como uma carteira de identidade virtual e garante
-                autenticidade, confidencialidade, integridade e não repúdio nas
-                operações realizadas no ambiente digital.
-              </p>
-              <p className="text-muted-foreground">
-                É obrigatório para empresas que emitem notas fiscais
-                eletrônicas, prestam serviços ao governo e realizam transações
-                que exigem validação jurídica digital.
-              </p>
+              <Link
+                href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce"
+                target="_blank"
+              >
+                <Button className="btn-hero">Renovar Agora</Button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        <section className="bg-background py-20">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-8 text-center text-4xl font-bold">
+                O que é Certificado Digital?
+              </h2>
+              <div className="prose prose-lg mx-auto">
+                <p className="text-muted-foreground mb-4">
+                  O Certificado Digital é uma identidade eletrônica que permite a
+                  identificação segura e inequívoca do autor de uma mensagem ou
+                  transação feita em meios eletrônicos, como a internet.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Funciona como uma carteira de identidade virtual e garante
+                  autenticidade, confidencialidade, integridade e não repúdio nas
+                  operações realizadas no ambiente digital.
+                </p>
+                <p className="text-muted-foreground">
+                  É obrigatório para empresas que emitem notas fiscais
+                  eletrônicas, prestam serviços ao governo e realizam transações
+                  que exigem validação jurídica digital.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
   );
 }

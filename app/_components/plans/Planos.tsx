@@ -36,40 +36,12 @@ export default function Planos() {
   return (
     <div className="min-h-screen">
       <Header />
-
-      {/* Hero Section */}
-      <section className="from-accent to-background bg-gradient-to-br pt-32 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-gradient mb-6 text-5xl font-bold md:text-6xl">
-            Planos de Saúde e Seguros
-          </h1>
-          <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
-            Garantir segurança e estabilidade é essencial para quem busca
-            tranquilidade e planejamento a longo prazo. Nossos planos de saúde e
-            seguros foram desenvolvidos para oferecer proteção completa, com
-            soluções personalizadas que atendem às necessidades de pessoas,
-            famílias e empresas.
-          </p>
-          <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
-            Com respaldo de instituições sólidas e atendimento de excelência,
-            proporcionamos a confiança necessária para enfrentar imprevistos e
-            manter o equilíbrio financeiro e emocional em qualquer
-            circunstância.
-          </p>
-          <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
-            Invista em segurança, bem-estar e tranquilidade. Escolha um plano
-            que acompanha você em todas as etapas da vida.
-          </p>
-        </div>
-      </section>
-
-      {/* Plans Grid */}
       <section className="bg-background md:flex:row flex flex-col items-center justify-between py-1 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-bold">
+          <h2 className="mb-10 mt-5 text-center text-4xl font-bold">
             Solicite Cotação
           </h2>
-          <div className="flex flex-col items-center justify-center gap-6 md:flex-row lg:flex-row">
+          <div className="flex flex-col items-center justify-center mb-5 gap-6 md:flex-row lg:flex-row">
             {plans.map((plan) => {
               const Icon = plan.icon;
               return (
@@ -105,83 +77,31 @@ export default function Planos() {
         </div>
       </section>
 
-      {/* Operators Section */}
-      <section className="py-5">
-        {/* Sem título */}
-        <p className="mt-5 mb-2 text-center text-4xl font-bold">
-          Operadoras Parceiras
-        </p>
-        <div className="flex max-w-[100%] flex-wrap items-center justify-center sm:max-w-[100%] sm:flex-row">
-          <Image src="/amil.png" alt="Amil" width={100} height={100} />
-
-          <Image src="/bradesco.png" alt="Bradesco" width={100} height={100} />
-
-          <Image src="/porto.png" alt="Porto Seguro" width={100} height={100} />
-
-          <Image src="/assim.png" alt="Assim Saúde" width={100} height={100} />
-
-          <Image
-            src="/sulamerica.png"
-            alt="SulAmérica"
-            width={100}
-            height={100}
-          />
-
-          <Image src="/unimed.png" alt="Unimed" width={100} height={100} />
-
-          <Image
-            src="/levesaude.png"
-            alt="Leve Saude"
-            width={100}
-            height={100}
-          />
-
-          <Image src="/amep.png" alt="Amep" width={100} height={100} />
-
-          <Image src="/klini.png" alt="Klini" width={100} height={100} />
-
-          <Image
-            src="/notredame.png"
-            alt="Notredame"
-            width={100}
-            height={100}
-          />
-
-          <Image src="/azul.png" alt="Azul Seguros" width={100} height={100} />
-
-          <Image src="/itau.png" alt="Itau Seguros" width={100} height={100} />
-
-          <Image src="/suhai.png" alt="Suhai" width={100} height={100} />
-
-          <Image
-            src="/tokyo.png"
-            alt="Tokyo Seguros"
-            width={100}
-            height={100}
-          />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="from-accent to-background bg-gradient-to-br pt-20 pb-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6 text-4xl font-bold">Ficou com Dúvida?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-xl opacity-90">
-            Entre em contato conosco! Nossa equipe especializada vai encontrar o
-            plano perfeito para suas necessidades e orçamento.
+          <h1 className="text-gradient mb-6 text-5xl font-bold md:text-6xl">
+            Planos de Saúde e Seguros
+          </h1>
+          <p className="text-muted-foreground mx-auto max-w-3xl text-2xl">
+            Garantir segurança e estabilidade é essencial para quem busca
+            tranquilidade e planejamento a longo prazo. Nossos planos de saúde e
+            seguros foram desenvolvidos para oferecer proteção completa, com
+            soluções personalizadas que atendem às necessidades de pessoas,
+            famílias e empresas.
           </p>
-          <Link
-            href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0"
-            target="_blank"
-          >
-            <Button className="text-primary bg-white px-8 py-6 text-lg outline hover:bg-white/90">
-              Falar com Especialista
-            </Button>
-          </Link>
+          <p className="text-muted-foreground mx-auto max-w-3xl text-2xl">
+            Com respaldo de instituições sólidas e atendimento de excelência,
+            proporcionamos a confiança necessária para enfrentar imprevistos e
+            manter o equilíbrio financeiro e emocional em qualquer
+            circunstância.
+          </p>
+          <p className="text-muted-foreground mx-auto max-w-3xl text-2xl">
+            Invista em segurança, bem-estar e tranquilidade. Escolha um plano
+            que acompanha você em todas as etapas da vida.
+          </p>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      
       <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
@@ -247,6 +167,79 @@ export default function Planos() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* <section className="py-5">
+        <p className="mt-5 mb-2 text-center text-4xl font-bold">
+          Operadoras Parceiras
+        </p>
+        <div className="flex max-w-[100%] flex-wrap items-center justify-center sm:max-w-[100%] sm:flex-row">
+          <Image src="/amil.png" alt="Amil" width={100} height={100} />
+
+          <Image src="/bradesco.png" alt="Bradesco" width={100} height={100} />
+
+          <Image src="/porto.png" alt="Porto Seguro" width={100} height={100} />
+
+          <Image src="/assim.png" alt="Assim Saúde" width={100} height={100} />
+
+          <Image
+            src="/sulamerica.png"
+            alt="SulAmérica"
+            width={100}
+            height={100}
+          />
+
+          <Image src="/unimed.png" alt="Unimed" width={100} height={100} />
+
+          <Image
+            src="/levesaude.png"
+            alt="Leve Saude"
+            width={100}
+            height={100}
+          />
+
+          <Image src="/amep.png" alt="Amep" width={100} height={100} />
+
+          <Image src="/klini.png" alt="Klini" width={100} height={100} />
+
+          <Image
+            src="/notredame.png"
+            alt="Notredame"
+            width={100}
+            height={100}
+          />
+
+          <Image src="/azul.png" alt="Azul Seguros" width={100} height={100} />
+
+          <Image src="/itau.png" alt="Itau Seguros" width={100} height={100} />
+
+          <Image src="/suhai.png" alt="Suhai" width={100} height={100} />
+
+          <Image
+            src="/tokyo.png"
+            alt="Tokyo Seguros"
+            width={100}
+            height={100}
+          />
+        </div>
+      </section> */}
+
+      <section className="bg-primary text-primary-foreground py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-6 text-4xl font-bold">Ficou com Dúvida?</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-xl opacity-90">
+            Entre em contato conosco! Nossa equipe especializada vai encontrar o
+            plano perfeito para suas necessidades e orçamento.
+          </p>
+          <Link
+            href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0"
+            target="_blank"
+          >
+            <Button className="text-primary bg-white px-8 py-6 text-lg outline hover:bg-white/90">
+              Falar com Especialista
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

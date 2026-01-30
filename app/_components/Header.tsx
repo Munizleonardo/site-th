@@ -12,15 +12,16 @@ import {
   DropdownMenuTrigger,
 } from "@/app/_components/ui/dropdown-menu";
 
-export default function Header() {
+interface HeaderProps {
+  forceVisible?: boolean;
+}
+
+export default function Header({ forceVisible = false }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
   const isForm = /^\/forms(?:\/|$)/.test(pathname);
-
-
-  const solidHeader = isForm || scrolled;  
+  const solidHeader = forceVisible || isForm || scrolled;  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +40,6 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
               <Image 
@@ -53,8 +53,6 @@ export default function Header() {
               TH TECNOLOGIA E CONSULTORIA LTDA
             </span>
           </Link>
-
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             <Link href="/certificados">
               <Button
@@ -91,8 +89,6 @@ export default function Header() {
                 A Empresa
               </Button>
             </Link>
-
-            {/* Repositório Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -120,8 +116,6 @@ export default function Header() {
                 </DropdownMenuItem> 
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {/* Suporte Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -151,8 +145,6 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
-
-          {/* Mobile Menu Button */}
           <button
             className={`lg:hidden ${solidHeader ? "text-foreground" : "text-white"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -161,78 +153,125 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 bg-background rounded-lg mt-2 shadow-lg">
-            <Link href="/certificados" className="block px-4 py-2 hover:bg-accent">
-              Certificado Digital
-            </Link>
-            <Link href="/healthplans" className="block px-4 py-2 hover:bg-accent">
-              Planos e Seguros
-            </Link>
-            <Link href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce" className="block px-4 py-2 hover:bg-accent">
-              Renovação
-            </Link>
-            <Link href="/#sobre" className="block px-4 py-2 hover:bg-accent">
-              A Empresa
-            </Link>
+          <div className="lg:hidden mt-3 rounded-2xl bg-background shadow-xl overflow-hidden">
+            <nav className="flex flex-col divide-y divide-border">
+              <Link
+                href="/certificados"
+                className="px-6 py-4 text-lg font-medium hover:bg-accent transition"
+              >
+                Certificado Digital
+              </Link>
 
-            {/* Repositório Dropdown */}
-            <div className="flex flex-col">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="w-[50%]">
-                  Repositório <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="block px-4 py-2 hover:bg-accent">
-              <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://thtecnologia.com.br/dou.pdf" target="_blank">
-                    Diário Oficial
-                  </Link>
-                </DropdownMenuItem> 
-                <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://thtecnologia.com.br/cd.pdf" target="_blank">
-                    Declaração de Práticas CD
-                  </Link>
-                </DropdownMenuItem> 
-                <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://thtecnologia.com.br/rfb.pdf" target="_blank">
-                    Declaração de Práticas RFB
-                  </Link>
-                </DropdownMenuItem> 
-              </DropdownMenuContent>
-            </DropdownMenu>
+              <Link
+                href="/healthplans"
+                className="px-6 py-4 text-lg font-medium hover:bg-accent transition"
+              >
+                Planos e Seguros
+              </Link>
 
-            {/* Suporte Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="w-[50%]">
-                  Suporte <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="block px-4 py-2 hover:bg-accent">
-                <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://safeweb.com.br/suporte/instalacao" target="_blank">
-                    Instalar Certificado
-                  </Link>
-                </DropdownMenuItem> 
-                <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://safeweb.com.br/suporte/centraldedownloads" target="_blank">
-                    Download Drivers
-                  </Link>
-                </DropdownMenuItem> 
-                <DropdownMenuItem className="cursor-pointer" asChild>
-                  <Link href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0" target="_blank">
-                    Dúvidas Gerais
-                  </Link>
-                </DropdownMenuItem> 
-                
-              </DropdownMenuContent>
-            </DropdownMenu>
+              <Link
+                href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce"
+                className="px-6 py-4 text-lg font-medium hover:bg-accent transition"
+              >
+                Renovação
+              </Link>
+
+              <Link
+                href="/#sobre"
+                className="px-6 py-4 text-lg font-medium hover:bg-accent transition"
+              >
+                A Empresa
+              </Link>
+            </nav>
+
+            <div className="flex flex-col gap-4 px-4 py-5">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center justify-between w-full h-14 px-5 rounded-xl bg-accent text-lg font-semibold hover:bg-accent/80 transition">
+                    Repositório
+                    <ChevronDown className="h-5 w-5" />
+                  </button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent
+                  align="start"
+                  className="w-[calc(100vw-2rem)] rounded-xl shadow-lg"
+                >
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://thtecnologia.com.br/dou.pdf"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Diário Oficial
+                    </Link>
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://thtecnologia.com.br/cd.pdf"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Declaração de Práticas CD
+                    </Link>
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://thtecnologia.com.br/rfb.pdf"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Declaração de Práticas RFB
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center justify-between w-full h-14 px-5 rounded-xl bg-accent text-lg font-semibold hover:bg-accent/80 transition">
+                    Suporte
+                    <ChevronDown className="h-5 w-5" />
+                  </button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent
+                  align="start"
+                  className="w-[calc(100vw-2rem)] rounded-xl shadow-lg"
+                >
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://safeweb.com.br/suporte/instalacao"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Instalar Certificado
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://safeweb.com.br/suporte/centraldedownloads"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Download de Drivers
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href="https://api.whatsapp.com/send/?phone=5521970686270&text&app_absent=0"
+                      target="_blank"
+                      className="px-4 py-3 text-base"
+                    >
+                      Dúvidas Gerais
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
-          
         )}
       </div>
     </header>
