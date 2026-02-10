@@ -11,9 +11,9 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <HeroCarousel />
-      <AboutSection />
       <CertificatesCarousel />
       <HealthPlansCarousel />
+      <AboutSection />
       <ContactSection />
       <Footer />
     </div>

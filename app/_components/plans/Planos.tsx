@@ -6,10 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/_components/ui/card";
-import { Heart, Car, Briefcase, Home } from "lucide-react";
+import { Heart, Car } from "lucide-react";
 import { Check } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const plans = [
   {
@@ -38,10 +37,10 @@ export default function Planos() {
       <Header />
       <section className="bg-background md:flex:row flex flex-col items-center justify-between py-1 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="mb-10 mt-5 text-center text-4xl font-bold">
+          <h2 className="mt-5 mb-10 text-center text-4xl font-bold">
             Solicite Cotação
           </h2>
-          <div className="flex flex-col items-center justify-center mb-5 gap-6 md:flex-row lg:flex-row">
+          <div className="mb-5 flex flex-col items-center justify-center gap-6 md:flex-row lg:flex-row">
             {plans.map((plan) => {
               const Icon = plan.icon;
               return (
@@ -77,7 +76,7 @@ export default function Planos() {
         </div>
       </section>
 
-      <section className="from-accent to-background bg-gradient-to-br pt-20 pb-20">
+      <section className="from-accent to-background bg-linear-to-br pt-20 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-gradient mb-6 text-5xl font-bold md:text-6xl">
             Planos de Saúde e Seguros
@@ -101,7 +100,7 @@ export default function Planos() {
           </p>
         </div>
       </section>
-      
+
       <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
@@ -110,7 +109,7 @@ export default function Planos() {
             </h2>
             <div className="grid gap-8 md:grid-cols-2">
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
+                <div className="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
                   <Check className="text-primary h-6 w-6" />
                 </div>
                 <div>
@@ -124,7 +123,7 @@ export default function Planos() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
+                <div className="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
                   <Check className="text-primary h-6 w-6" />
                 </div>
                 <div>
@@ -138,7 +137,7 @@ export default function Planos() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
+                <div className="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
                   <Check className="text-primary h-6 w-6" />
                 </div>
                 <div>

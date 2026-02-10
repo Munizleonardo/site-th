@@ -62,7 +62,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                     : "hover:text-primary text-white hover:bg-white/10"
                 }
               >
-                Certificado Digital
+                Comprar Certificado Digital
               </Button>
             </Link>
 
@@ -198,7 +198,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                 href="/certificados"
                 className="hover:bg-accent px-6 py-4 text-lg font-medium transition"
               >
-                Certificado Digital
+                Comprar Certificado Digital
               </Link>
 
               <Link

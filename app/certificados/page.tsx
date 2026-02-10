@@ -14,7 +14,7 @@ export default function certificados() {
     return (
         <div className="min-h-screen">
             <Header />
-            <CarouselCerts />
+            {/*      */}
             <Certificados />
             <ContactSection />
             <Footer />

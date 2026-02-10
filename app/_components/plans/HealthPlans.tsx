@@ -41,7 +41,7 @@ export default function HealthPlans() {
   };
 
   return (
-    <div className="relative h-[600px] overflow-hidden lg:h-[700px]">
+    <div className="relative h-[300px] overflow-hidden lg:h-[350px]">
       {slidesPlans.map((slide, index) => (
         <div
           key={slide.id}

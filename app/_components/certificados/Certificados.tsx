@@ -137,7 +137,7 @@ export default function Certificados() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="bg-background py-">
+      <section className="bg-background py-20">
       <div className="mb-4 mt-4 container mx-auto px-4 text-center">
           <h1 className="text-gradient mb-2 text-5xl font-bold md:text-6xl">
             Certificados Digitais

@@ -24,7 +24,7 @@ export default function HealthPlansCarousel() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12">
         <div className="flex flex-col gap-4 text-center">
           <h2 className="text-4xl font-bold md:text-5xl">
-            Planos de Saúde e Seguros para Você
+            Planos de Saúde e Seguros Auto
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Trabalhamos com as maiores seguradoras do Brasil para oferecer as
