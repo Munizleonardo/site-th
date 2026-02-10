@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import LogoParks from "@/app/_components/LogoParks";
 
 export default function Footer() {
@@ -19,9 +19,9 @@ export default function Footer() {
                 TH TECNOLOGIA E CONSULTORIA LTDA
               </span>
             </div>
-            <p className="text-primary-foreground/90 mb-4">
-              Especialistas em Certificados Digitais e Planos de Saúde.
-              Segurança e qualidade de vida para você e sua empresa.
+            <p className="text-primary-foreground/90 mb-4 font-semibold">
+              Especialistas em Certificados Digitais, Planos de Saúde e Seguro Auto.<br/>
+              Segurança e qualidade de vida para você, sua família e sua empresa.
             </p>
             <div className="flex space-x-4">
               <a
@@ -31,6 +31,14 @@ export default function Footer() {
                 className="transition-opacity hover:opacity-80"
               >
                 <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/thiago-ienzura-6b800254/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <Linkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -52,7 +60,7 @@ export default function Footer() {
                   href="/healthplans"
                   className="transition-opacity hover:opacity-80"
                 >
-                  Planos e Seguros
+                  Planos de Saúde e Seguros Auto
                 </Link>
               </li>
               <li>
@@ -81,7 +89,7 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Serviços</h3>
             <ul className="space-y-2">
               <li>Certificado Digital</li>
-              <li>Planos e Seguros</li>
+              <li>Planos de Saúde e Seguros Auto</li>
               <li>Suporte Especializado</li>
             </ul>
           </div>
