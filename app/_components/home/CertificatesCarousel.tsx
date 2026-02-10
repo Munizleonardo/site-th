@@ -83,13 +83,13 @@ export default function CertificatesCarousel() {
           })}
         </div>
 
-        {/* <div className="aling-center mt-8 flex justify-center">
+        <div className="aling-center mt-8 flex justify-center">
           <Link href="/certificados">
             <Button className="bg-primary w-80 hover:text-black">
               Confira os Produtos
             </Button>
           </Link>
-        </div> */}
+        </div>
       </div>
     </section>
   );
