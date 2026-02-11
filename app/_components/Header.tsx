@@ -46,13 +46,13 @@ export default function Header({ forceVisible = false }: HeaderProps) {
       <div className="container mx-auto px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-primary-foreground flex h-12 w-12 items-center justify-center rounded-lg text-xl font-bold">
+            <div className="text-primary-foreground flex h-12 w-12 items-center justify-center rounded-lg text-lg font-bold">
               <Image src="/favicon.png" alt="Logo" width={100} height={100} />
             </div>
             <span
-              className={`text-lg font-bold ${solidHeader ? "text-foreground" : "text-white"}`}
+              className={`text-sm font-bold ${solidHeader ? "text-foreground" : "text-white"}`}
             >
-              TH TECNOLOGIA E<br /> CONSULTORIA
+              TH TECNOLOGIA E CONSULTORIA
             </span>
           </Link>
           <nav className="hidden items-center space-x-1 lg:flex">
