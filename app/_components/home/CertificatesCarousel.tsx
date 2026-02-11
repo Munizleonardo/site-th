@@ -18,6 +18,7 @@ const certificates = [
     description:
       "Certificado digital para pessoa física armazenado no computador ou em mídia, com validade de 3 anos. Ideal para uso individual em aplicações web.",
     color: "text-blue-500",
+    href: "/certificados/cpf",
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const certificates = [
     description:
       "Certificado digital para pessoa jurídica armazenado no computador ou em mídia, com validade de 3 anos. Perfeito para pequenas empresas.",
     color: "text-purple-500",
+    href: "/certificados/cnpj",
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const certificates = [
     description:
       "Certificado digital para pessoa jurídica ou física com validade de 4 anos em nuvem. Renove o seu período de uso, sem precisar de videoconferência.",
     color: "text-primary",
+    href: "/certificados/nuvem",
   },
 ];
 
@@ -57,39 +60,46 @@ export default function CertificatesCarousel() {
           {certificates.map((cert) => {
             const Icon = cert.icon;
             return (
-              <Card key={cert.id} className="card-hover bg-card">
-                <CardHeader className="grid">
-                  <div className="flex flex-row gap-5">
-                    <div
-                      className={`bg-accent mb-4 flex h-16 w-16 items-center justify-center rounded-lg ${cert.color}`}
-                    >
-                      <Icon className="h-8 w-8" />
+              <Link
+                key={cert.id}
+                href={cert.href}
+                aria-label={`Ver detalhes: ${cert.title}`}
+                className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              >
+                <Card className="card-hover bg-card cursor-pointer transition-colors group-hover:bg-primary group-focus-visible:bg-primary group-hover:text-black group-focus-visible:text-primary-foreground">
+                  <CardHeader className="grid">
+                    <div className="flex flex-row gap-5">
+                      <div
+                        className={`bg-accent mb-4 flex h-16 w-16 items-center justify-center rounded-lg ${cert.color} group-hover:bg-primary-foreground/15 group-focus-visible:bg-primary-foreground/15 group-hover:text-black group-focus-visible:text-primary-foreground`}
+                      >
+                        <Icon className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="flex-center flex items-center justify-center text-2xl">
+                        {cert.title}
+                      </CardTitle>
                     </div>
-                    <CardTitle className="flex-center flex items-center justify-center text-2xl">
-                      {cert.title}
-                    </CardTitle>
-                  </div>
-                  <CardContent className="flex flex-col text-xl font-bold text-black">
-                    {cert.content}
+                    <CardContent className="flex flex-col text-xl font-bold group-hover:text-black group-focus-visible:text-primary-foreground">
+                      {cert.content}
+                    </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="mb-4 text-base group-hover:text-black group-focus-visible:text-primary-foreground/90">
+                      {cert.description}
+                    </CardDescription>
                   </CardContent>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4 text-base">
-                    {cert.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                </Card>
+              </Link>
             );
           })}
         </div>
 
-        <div className="aling-center mt-8 flex justify-center">
+        {/* <div className="aling-center mt-8 flex justify-center">
           <Link href="/certificados">
             <Button className="bg-primary w-80 hover:text-black">
               Confira os Produtos
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -20,8 +20,11 @@ export default function Header({ forceVisible = false }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isForm = /^\/forms(?:\/|$)/.test(pathname);
-  const solidHeader = forceVisible || isForm || scrolled;
+  const forceSolidByRoute =
+    /^\/forms(?:\/|$)/.test(pathname) ||
+    /^\/certificados(?:\/|$)/.test(pathname) ||
+    /^\/certificados\/(cpf|cnpj|nuvem)(?:\/|$)/.test(pathname);
+  const solidHeader = forceVisible || forceSolidByRoute || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {

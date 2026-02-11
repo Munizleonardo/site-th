@@ -72,21 +72,21 @@ export default function ContactSection() {
                   <Image
                     src="/safeweb1.png"
                     alt="Safeweb"
-                    width={150}
-                    height={60}
+                    width={130}
+                    height={50}
                   />
 
-                  <Image src="/gestao.png" alt="ITI" width={150} height={60} />
+                  <Image src="/gestao.png" alt="ITI" width={130} height={50} />
                 </div>
 
                 <div className="flex gap-2">
-                  <Image src="/safe.png" alt="ITI" width={150} height={60} />
+                  <Image src="/safe.png" alt="ITI" width={130} height={50} />
 
                   <Image
                     src="/logo_iti.png"
                     alt="ITI"
-                    width={150}
-                    height={60}
+                    width={130}
+                    height={50}
                   />
                 </div>
               </div>
