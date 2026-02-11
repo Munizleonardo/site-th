@@ -86,6 +86,9 @@ export default function CertificatesCarousel() {
                     <CardDescription className="mb-4 text-base group-hover:text-black group-focus-visible:text-primary-foreground/90">
                       {cert.description}
                     </CardDescription>
+                    <div className="flex items-center justify-center">
+                      <p className="text-primary animate-flash mx-auto flex max-w-2xl justify-center text-2xl font-bold sm:flex sm:justify-center sm:text-2xl ">Clique e Compre</p>
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
