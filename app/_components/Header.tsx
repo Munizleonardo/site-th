@@ -43,7 +43,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-primary-foreground flex h-12 w-12 items-center justify-center rounded-lg text-xl font-bold">
@@ -52,7 +52,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
             <span
               className={`text-lg font-bold ${solidHeader ? "text-foreground" : "text-white"}`}
             >
-              TH TECNOLOGIA E CONSULTORIA LTDA
+              TH TECNOLOGIA E<br /> CONSULTORIA
             </span>
           </Link>
           <nav className="hidden items-center space-x-1 lg:flex">

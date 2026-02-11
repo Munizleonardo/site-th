@@ -45,7 +45,7 @@ const certificates = [
 export default function CertificatesCarousel() {
   return (
     <section className="bg-accent py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto flex flex-col items-center justify-center px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-4xl font-bold md:text-5xl">
             Escolha seu Certificado Digital
@@ -56,7 +56,7 @@ export default function CertificatesCarousel() {
           </p>
         </div>
 
-        <div className="grid gap-6 text-center md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 text-center md:grid-cols-2 lg:grid-cols-3">
           {certificates.map((cert) => {
             const Icon = cert.icon;
             return (
@@ -64,13 +64,13 @@ export default function CertificatesCarousel() {
                 key={cert.id}
                 href={cert.href}
                 aria-label={`Ver detalhes: ${cert.title}`}
-                className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className="group focus-visible:ring-primary block rounded-xl focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                <Card className="card-hover bg-card cursor-pointer transition-colors group-hover:bg-primary group-focus-visible:bg-primary group-hover:text-black group-focus-visible:text-primary-foreground">
+                <Card className="card-hover bg-card group-hover:bg-primary group-focus-visible:bg-primary group-focus-visible:text-primary-foreground h-90 w-90 cursor-pointer transition-colors group-hover:text-black">
                   <CardHeader className="grid">
                     <div className="flex flex-row gap-5">
                       <div
-                        className={`bg-accent mb-4 flex h-16 w-16 items-center justify-center rounded-lg ${cert.color} group-hover:bg-primary-foreground/15 group-focus-visible:bg-primary-foreground/15 group-hover:text-black group-focus-visible:text-primary-foreground`}
+                        className={`bg-accent mb-4 flex h-16 w-16 items-center justify-center rounded-lg ${cert.color} group-hover:bg-primary-foreground/15 group-focus-visible:bg-primary-foreground/15 group-focus-visible:text-primary-foreground group-hover:text-black`}
                       >
                         <Icon className="h-8 w-8" />
                       </div>
@@ -78,16 +78,18 @@ export default function CertificatesCarousel() {
                         {cert.title}
                       </CardTitle>
                     </div>
-                    <CardContent className="flex flex-col text-xl font-bold group-hover:text-black group-focus-visible:text-primary-foreground">
+                    <CardContent className="group-focus-visible:text-primary-foreground flex flex-col text-xl font-bold group-hover:text-black">
                       {cert.content}
                     </CardContent>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="mb-4 text-base group-hover:text-black group-focus-visible:text-primary-foreground/90">
+                    <CardDescription className="group-focus-visible:text-primary-foreground/90 mb-4 text-base group-hover:text-black">
                       {cert.description}
                     </CardDescription>
-                    <div className="flex items-center justify-center">
-                      <p className="text-primary animate-flash mx-auto flex max-w-2xl justify-center text-2xl font-bold sm:flex sm:justify-center sm:text-2xl ">Clique e Compre</p>
+                    <div className="flex items-end justify-end">
+                      <p className="text-primary animate-flash mx-auto flex max-w-2xl items-end justify-end text-3xl font-bold sm:flex sm:items-end sm:justify-end sm:text-2xl lg:items-end">
+                        Clique e Compre
+                      </p>
                     </div>
                   </CardContent>
                 </Card>

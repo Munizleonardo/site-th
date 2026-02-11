@@ -32,7 +32,7 @@ export default function HealthPlansCarousel() {
           </p>
         </div>
 
-        <div className="flex w-[100%] flex-col flex-wrap justify-center gap-4 sm:w-[100%] sm:flex-row">
+        <div className="flex w-[70%] flex-col flex-wrap justify-center gap-4 sm:w-[100%] sm:flex-row">
           {healthPlans.map((plan) => {
             const Icon = plan.icon;
             return (
