@@ -225,7 +225,7 @@ export default function CertificateChoiceBox({
             <div>
               <div className="rounded-xl mb-4 border justify-between flex flex-row bg-background p-4">
                 <p className="text-lg font-semibold">Valor:</p>
-                <p className="text-primary/90 mt-1 flex  text-5xl font-bold">
+                <p className="text-primary/90 mt-1 flex  text-3xl font-bold">
                   {offerPrice
                     ? offerPrice
                     : cpfCnpjModel === "A1" && !isCloud
