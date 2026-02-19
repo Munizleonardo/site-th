@@ -16,7 +16,7 @@ const certificates = [
     title: "Pessoa Física",
     content: "e-CPF",
     description:
-      "Certificado digital para pessoa física armazenado no computador ou em mídia, com validade de 3 anos. Ideal para uso individual em aplicações web.",
+      "Certificado digital para pessoa física armazenado no computador ou em mídia, com validade de 2 anos. Ideal para uso individual em aplicações web.",
     color: "text-blue-500",
     href: "/certificados/cpf",
   },
@@ -26,7 +26,7 @@ const certificates = [
     title: "Pessoa Jurídica",
     content: "e-CNPJ",
     description:
-      "Certificado digital para pessoa jurídica armazenado no computador ou em mídia, com validade de 3 anos. Perfeito para pequenas empresas.",
+      "Certificado digital para pessoa jurídica armazenado no computador ou em mídia, com validade de 2 anos. Perfeito para pequenas empresas.",
     color: "text-purple-500",
     href: "/certificados/cnpj",
   },
