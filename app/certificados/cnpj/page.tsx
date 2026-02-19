@@ -10,7 +10,7 @@ const offers: Record<string, { price: string; href: string }> = {
   "CNPJ|A1": { price: "R$ 220,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/d61fa9c3-ad5f-41f9-b058-6743d2d182ad" },
   "CNPJ|A3|1 ano": { price: "R$ 240,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/edf06469-8da5-4b60-a492-aea7a4325ac3" },
   "CNPJ|A3|2 anos": { price: "R$ 269,90", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/1e86c3b4-2e81-4a42-86b8-36e6b46d5b3f" },
-  "CNPJ|A3|3 anos": { price: "R$ 299,90", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/f1aebe8d-4649-4977-87ea-97678917967a" },
+  // "CNPJ|A3|3 anos": { price: "R$ 299,90", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/f1aebe8d-4649-4977-87ea-97678917967a" },
 };
 
 export default function CertificadoCnpjPage() {
