@@ -60,7 +60,7 @@ export default function Footer() {
                   href="/healthplans"
                   className="transition-opacity hover:opacity-80"
                 >
-                  Planos de Saúde e Seguros Auto
+                  Planos de Saúde e Seguros Auto 
                 </Link>
               </li>
               <li>
