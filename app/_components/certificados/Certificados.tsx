@@ -47,7 +47,7 @@ const certificates = [
     icon: FileText,
     title: "e-CNPJ A1",
     validity: "1 ano",
-    price: "R$ 220,00",
+    price: "R$ 240,00",
     link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/d61fa9c3-ad5f-41f9-b058-6743d2d182ad",
     features: [
       "Para pessoa jurídica",
