@@ -277,7 +277,7 @@ export default function Certificados() {
                 />
 
                 <div className="space-y-3">
-                  <p className="text-base font-semibold text-gray-900">4. Valor e solicitacao</p>
+                  <p className="text-base font-semibold text-gray-900">4. Valor</p>
                   <div className="space-y-3 rounded-lg border border-gray-200 p-4">
                     <p className="text-sm text-gray-600">Valor do certificado selecionado</p>
                     <p className="text-primary text-3xl font-bold">
@@ -287,12 +287,12 @@ export default function Certificados() {
                     {validity ? (
                       <Link href={actionLink} target="_blank">
                         <Button className="bg-primary hover:bg-primary-hover w-full">
-                          Solicitar agora
+                          Solicitar Agora
                         </Button>
                       </Link>
                     ) : (
                       <Button className="w-full" disabled>
-                        Solicitar agora
+                        Solicitar Agora
                       </Button>
                     )}
                   </div>
