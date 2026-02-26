@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/app/_components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/_components/ui/card";
 
-type CertificateType = "PESSOA JURÍDICA | e-CNPJ" | "PESSOA FÍSICA | e-CPF" | "PESSOA JURÍDICA INAPTA | e-PJ" | "NUVEM | SafeID" | "ADVOGADOS | OAB" | "NOTAS FISCAIS | NF-e";
+type CertificateType = "PESSOA JURÍDICA | e-CNPJ" | "PESSOA FÍSICA | e-CPF" | "NUVEM | SafeID" | "ADVOGADOS | OAB" | "NOTAS FISCAIS | NF-e";
 
 type SelectionOption = {
   label: string;
@@ -19,7 +19,6 @@ type CertificateCatalog = Record<CertificateType, Record<string, SelectionOption
 const CERTIFICATE_ORDER: CertificateType[] = [
   "PESSOA JURÍDICA | e-CNPJ",
   "PESSOA FÍSICA | e-CPF",
-  "PESSOA JURÍDICA INAPTA | e-PJ",
   "ADVOGADOS | OAB",
   "NUVEM | SafeID",
   "NOTAS FISCAIS | NF-e",
@@ -77,15 +76,6 @@ const CERTIFICATE_DATA: CertificateCatalog = {
         label: "3 anos",
         price: "Não Disponível!",
         link: "",
-      },
-    ],
-  },
-  "PESSOA JURÍDICA INAPTA | e-PJ": {
-    A1: [
-      {
-        label: "1 ano",
-        price: "R$ 250,00",
-        link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/e51aa6ce-4e11-44e7-a4ee-c472a68cebaf",
       },
     ],
   },
