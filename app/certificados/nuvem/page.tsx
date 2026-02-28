@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 const offers: Record<string, { price: string; href: string }> = {
   "CPF|4 meses": { price: "R$ 70,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/0ac21f33-634f-454c-b801-5da206654f7f" },
   "CPF|1 ano": { price: "R$ 170,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/573e9949-1ab4-474b-b8c4-d6237160eea8" },
-  // "CPF|3 anos": { price: "R$ 280,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/a7673a50-5b38-4a20-8a28-2802e5be5f6e" },
+  "CPF|2 anos": { price: "R$ 220,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/7545a6b6-7e18-4ac4-be22-b0fd5ce97af2" },
+  "CPF|3 anos": { price: "Não Disponível!", href: "/certificados" },
   "CNPJ|1 ano": { price: "R$ 240,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/aa9d127d-7bf8-4fbc-8944-bf205c162652" },
 };
 
