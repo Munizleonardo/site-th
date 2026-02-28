@@ -17,7 +17,7 @@ type CertPageKind = "cpf" | "cnpj" | "nuvem";
 
 const cpfCnpjModels = ["A1", "A3"] as const;
 const cpfCnpjPeriods = ["1 ano", "2 anos", "3 anos"] as const;
-const cloudCpfPeriods = ["4 meses", "1 ano", "3 anos"] as const;
+const cloudCpfPeriods = ["4 meses", "1 ano", "2 anos", "3 anos"] as const;
 const cloudCnpjPeriods = ["1 ano"] as const;
 
 type Offer = { price: string; href: string };
