@@ -249,7 +249,7 @@ export default function Certificados() {
                   disabled={!certificateType}
                   renderLabel={(value) => {
                     if (value === "A1") return "A1 | ARQUIVO";
-                    if (value === "A3") return "A3 | MÍDIA";
+                    if (value === "A3") return "A3 | SOMENTE CERTIFICADO";
                     return value;
                   }}
                   onSelect={(value) => {

@@ -82,22 +82,6 @@ export default function Header({ forceVisible = false }: HeaderProps) {
               </Button>
             </Link>
 
-            <Link
-              href="https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                className={
-                  solidHeader
-                    ? "text-foreground hover:text-primary"
-                    : "hover:text-primary text-white hover:bg-white/10"
-                }
-              >
-                Renovação
-              </Button>
-            </Link>
-
             <Link href="/#sobre">
               <Button
                 variant="ghost"
