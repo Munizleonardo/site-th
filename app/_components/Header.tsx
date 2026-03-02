@@ -62,7 +62,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                 className={
                   solidHeader
                     ? "text-foreground hover:text-primary"
-                    : "hover:text-primary text-white hover:bg-white/10"
+                    : "hover:text-primary text-white hover:bg-white/20"
                 }
               >
                 Comprar Certificado Digital
@@ -75,7 +75,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                 className={
                   solidHeader
                     ? "text-foreground hover:text-primary"
-                    : "hover:text-primary text-white hover:bg-white/10"
+                    : "hover:text-primary text-white hover:bg-white/20"
                 }
               >
                 Planos e Seguros
@@ -88,7 +88,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                 className={
                   solidHeader
                     ? "text-foreground hover:text-primary"
-                    : "hover:text-primary text-white hover:bg-white/10"
+                    : "hover:text-primary text-white hover:bg-white/20"
                 }
               >
                 A Empresa
@@ -101,7 +101,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                   className={
                     solidHeader
                       ? "text-foreground hover:text-primary"
-                      : "hover:text-primary text-white hover:bg-white/10"
+                      : "hover:text-primary text-white hover:bg-white/20"
                   }
                 >
                   Repositório <ChevronDown className="ml-1 h-4 w-4" />
@@ -132,7 +132,7 @@ export default function Header({ forceVisible = false }: HeaderProps) {
                   className={
                     solidHeader
                       ? "text-foreground hover:text-primary"
-                      : "hover:text-primary text-white hover:bg-white/10"
+                      : "hover:text-primary text-white hover:bg-white/20"
                   }
                 >
                   Suporte <ChevronDown className="ml-1 h-4 w-4" />
