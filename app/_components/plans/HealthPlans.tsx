@@ -41,7 +41,7 @@ export default function HealthPlans() {
   };
 
   return (
-    <div className="relative h-[300px] overflow-hidden lg:h-[350px]">
+    <div className="relative h-[380px] overflow-hidden sm:h-[420px] lg:h-[350px]">
       {slidesPlans.map((slide, index) => (
         <div
           key={slide.id}
@@ -55,12 +55,12 @@ export default function HealthPlans() {
           >
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          <div className="relative flex h-full items-center justify-center px-4 text-center">
+          <div className="relative flex h-full items-center justify-center px-4 pt-24 pb-16 text-center sm:pt-28 lg:pt-0 lg:pb-0">
             <div className="animate-fade-in max-w-4xl">
-              <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+              <h1 className="mb-4 text-3xl font-bold text-white md:text-5xl lg:mb-6 lg:text-6xl">
                 {slide.title}
               </h1>
-              <p className="mb-8 text-xl text-white/90 md:text-2xl">
+              <p className="mb-6 text-lg text-white/90 md:text-2xl lg:mb-8">
                 {slide.description}
               </p>
             </div>
@@ -71,19 +71,19 @@ export default function HealthPlans() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur-sm transition-all hover:bg-white/30"
+        className="absolute top-1/2 left-3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:left-4 sm:p-3"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur-sm transition-all hover:bg-white/30"
+        className="absolute top-1/2 right-3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:right-4 sm:p-3"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 space-x-2">
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 space-x-2 sm:bottom-8">
         {slidesPlans.map((_, index) => (
           <button
             key={index}

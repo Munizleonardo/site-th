@@ -43,7 +43,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
+    <div className="relative h-[380px] overflow-hidden sm:h-[420px] lg:h-[350px]">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -57,12 +57,12 @@ export default function HeroCarousel() {
           >
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          <div className="relative h-full flex items-center justify-center text-center px-4">
+          <div className="relative flex h-full items-center justify-center px-4 pt-24 pb-16 text-center sm:pt-28 lg:pt-0 lg:pb-0">
             <div className="max-w-4xl animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="mb-4 text-3xl font-bold text-white md:text-5xl lg:mb-6 lg:text-6xl">
                 {slide.title}
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8">
+              <p className="mb-6 text-lg text-white/90 md:text-2xl lg:mb-8">
                 {slide.description}
               </p>
               
@@ -74,19 +74,19 @@ export default function HeroCarousel() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all backdrop-blur-sm z-10"
+        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:left-4 sm:p-3"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all backdrop-blur-sm z-10"
+        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:right-4 sm:p-3"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 space-x-2 sm:bottom-8">
         {slides.map((_, index) => (
           <button
             key={index}
