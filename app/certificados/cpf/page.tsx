@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const offers: Record<string, { price: string; href: string }> = {
   "CPF|A1": { price: "R$ 150,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/cb61f5c6-2749-4e78-9aa8-118618c46840" },
-  "CPF|A3|1 ano": { price: "R$ 170,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/558e2d16-2124-4f44-af8e-f20d43739d48" },
+  "CPF|A3|1 ano": { price: "R$ 160,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/558e2d16-2124-4f44-af8e-f20d43739d48" },
   "CPF|A3|2 anos": { price: "R$ 199,00", href: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/69ecf8b1-45ba-4a2c-a0e0-7bbb3e68372d" },
   "CPF|A3|3 anos": { price: "Não Disponível!", href: "/certificados" },
 };

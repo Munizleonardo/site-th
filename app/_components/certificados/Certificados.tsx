@@ -31,7 +31,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
     A1: [
       {
         label: "1 ano",
-        price: "R$ 240,00",
+        price: "R$ 220,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/d61fa9c3-ad5f-41f9-b058-6743d2d182ad",
       },
     ],
@@ -43,7 +43,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
       },
       {
         label: "2 anos",
-        price: "R$ 269,90",
+        price: "R$ 330,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/1e86c3b4-2e81-4a42-86b8-36e6b46d5b3f",
       },
       {
@@ -64,7 +64,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
     A3: [
       {
         label: "1 ano",
-        price: "R$ 170,00",
+        price: "R$ 160,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/558e2d16-2124-4f44-af8e-f20d43739d48",
       },
       {
@@ -83,7 +83,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
     CPF: [
       {
         label: "Nuvem CPF - 4 meses",
-        price: "R$ 70,00",
+        price: "R$ 60,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/0ac21f33-634f-454c-b801-5da206654f7f",
       },
       {
@@ -93,7 +93,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
       },
       {
         label: "Nuvem CPF - 2 anos",
-        price: "R$ 220,00",
+        price: "R$ 320,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/7545a6b6-7e18-4ac4-be22-b0fd5ce97af2",
       },
       {
