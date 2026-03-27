@@ -31,7 +31,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
     A1: [
       {
         label: "1 ano",
-        price: "R$ 220,00",
+        price: "R$ 240,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/d61fa9c3-ad5f-41f9-b058-6743d2d182ad",
       },
     ],
@@ -83,7 +83,7 @@ const CERTIFICATE_DATA: CertificateCatalog = {
     CPF: [
       {
         label: "Nuvem CPF - 4 meses",
-        price: "R$ 60,00",
+        price: "R$ 80,00",
         link: "https://parceiro.gestaoar.shop/thtecnologia/th-ecommerce/produto/0ac21f33-634f-454c-b801-5da206654f7f",
       },
       {
